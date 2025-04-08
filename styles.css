@@ -1,0 +1,370 @@
+header{
+    display: flex;
+    color: white;
+    position: fixed;
+    width: 100vw;
+    height: 5rem;
+    background-color: whitesmoke;
+    margin: 0%;
+    z-index: 1000;
+    gap: 50%;
+    transition: opacity 0.3 ease-in-out;
+    opacity: 0.3;
+
+}
+/*hover over header*/
+header:hover{ 
+    opacity: 1;
+}
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+/*hover over navigation*/
+nav a:hover {
+    text-decoration:underline;
+    color: yellow;
+}
+/*size the icons*/
+nav img{
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+}
+
+/* Heading Fade-in Effect */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+/* Active Section Heading */
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+.logo{
+    padding: 1.5rem;
+    padding-left: 10%;
+    flex: left;
+}
+.logo img{
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+}
+
+div.navigation{
+    display: grid;
+    grid-template-rows: repeat(5, 100px);
+    gap: 20%;
+    text-align: right;
+    padding: 1.5rem;
+    flex: right;
+    width: 60rem;
+}
+
+body{
+    height: 100vh;
+    width: 100vw;
+    background-color: aliceblue;
+    
+}
+section{
+    height: 100vh;
+    scroll-behavior: smooth;
+    margin: 1rem;
+    padding: 1rem;
+    justify-self: center;
+    justify-content: center;
+}
+.section-one{
+    background-color: pink;
+}
+.section-two{
+    background-color: red;
+}
+.section-three{
+    background-color: blue;
+}
+.section-four{
+    background-color: yellow;
+}
+.section-five{
+    background-color: gray;
+}
+/* aligning content */
+#content{
+    width: 87vw;
+    height: 80vh;
+    margin: 4rem;
+    background-color:white;
+}
+/* aligning visuals*/
+
+/* aligning visual-one*/
+
+.visual-one{
+    display: grid;
+    grid-template-columns: 49% 49%;
+    gap: 2%;
+    height: 100%;
+}
+
+#left-one{
+    display: grid;
+    grid-template-rows: 39% 59%;
+}
+.top-image img{
+    margin-top: 4rem;
+    margin-left: 4rem;
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+    background-color: black;
+}
+.bottom-text{
+    padding-left: 10rem;
+}
+.bottom-text p{
+    padding-top: 4rem;
+}
+.bottom-text h6{
+    padding-top: 4rem;
+}
+.bottom-text h3{
+    color: black;
+    text-align: left;
+}
+
+#right-one{
+    padding-top: 4rem;
+}
+#right-one img{
+    width: 90%;
+    height: 90%;
+    background-color: black;
+    border-radius: 110%;
+
+}
+/* aligning visual-two*/
+.visual-two{
+    display: grid;
+    grid-template-columns: 39% 59%;
+    gap: 2%;
+    height: 100%;
+}
+#left-two{
+    display: grid;
+    grid-template-rows: 79% 19%;
+    gap: 2%;
+}
+.bottom-button{
+    padding-top: 0%;
+    padding-left: 30%;
+}
+.top-text{
+    padding-top: 15%;
+    padding-left: 20%;
+}
+.top-text h2{ 
+    color: black;
+    padding-top: 3rem;
+    font-size: 3rem;
+}
+.top-text p{
+    text-align: center;
+    font-size: 1rem;
+}
+.categories{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    height: 85%;
+    justify-content: center;
+    padding-top: 15%;
+    gap: 5%;
+}
+.item{
+    padding-top: 5%;
+}
+.item img{
+    width: 100%;
+    height: 40%;
+    background-color: black;
+    justify-content:space-around;
+    
+}
+.bottom-button button{
+    width: 8.5rem;
+    height: 2.5rem;
+    border-radius: 15%;
+    background-color: black;
+    color: beige;
+}
+
+/* aligning visual-three along with content*/
+
+.visual-three{
+    display: grid;
+    grid-template-columns: 49% 49%;
+    height: 100%;
+}
+#left-three{
+    padding-top: 10%;
+    }
+#left-three h1{
+    text-align: center;
+    padding-left: 5%; 
+    font-size: 2.5rem;
+}
+#left-three p{
+    text-align: center;
+    padding-left: 5%;
+    font-size: 20pt;
+}
+#right-three{
+    display: grid;
+    grid-template-columns: repeat(2, 49%);
+    gap: 2%;
+}
+.box-left{
+    margin-top: 0%;
+    display: grid;
+    grid-template-rows: repeat(2, 45%);
+    gap: 2%;
+}
+.box-left .quality{
+    width: 90%;
+    height: 90%;
+    background-color: black;
+    color: aliceblue;
+    flex-direction: top;
+
+}
+.box-left .consistent{
+    width: 90%;
+    height: 90%;
+    background-color: black;
+    color: aliceblue;
+    flex-direction: top;
+
+}
+.box-right{
+    margin-top: 25%;
+    display: grid;
+    grid-template-rows: repeat(2, 50%);
+    gap: 2%;
+}
+.box-right .focus{
+    width: 90%;
+    height: 90%;
+    background-color: black;
+    color: aliceblue;
+    flex-direction: top;
+}
+.box-right .loyalty{
+    width: 90%;
+    height: 90%;
+    background-color: black;
+    color: aliceblue;
+    flex-direction: top;
+}
+/* aligning visual-four along with content*/
+
+.visual-four{
+    display: grid;
+    grid-template-rows: 10% 70% 10%;
+    height: 100%;
+    gap: 5%;
+}
+#top-four h1{
+    font-size: 2rem;
+    text-align: center;
+}
+#middle-four{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    align-content: center;
+}
+.testimonial img{
+    width: 30%;
+    height: 30%;
+    background-color: black;
+    border-radius: 100%;
+    display: flex;
+    margin-left: 35%;
+}
+.testimonial p{
+    text-align: center;
+}
+button{
+    margin-left: 45%;
+}
+
+/* aligning visaul-five along with content*/
+.visual-five{
+    display: grid;
+    grid-template-columns: 49% 49%;
+    height: 100%;
+}
+#left-five{
+    display: grid;
+    grid-template-rows: repeat(2, 50%);
+}
+#left-five img{
+    align-self: center;
+    justify-self: center;
+    margin-top: 30%;
+    width: 7rem;
+    height: 7rem;
+    background-color: black;
+    border-radius: 100%;
+}
+#left-five h3{
+    font-size: 12pt;
+    text-align: center;
+}
+#right-five{
+    margin-top: 10%;
+    height: 80%;
+    display: grid;
+    grid-template-rows: 10% 70% 10% ;
+}
+.top h3{
+    font-size: 15pt;
+    text-align: left;
+}
+.middle{
+    display: flex;
+    align-self: center;
+    align-items: center;
+}
+.form-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    flex: 1;
+    text-align: center;
+    padding-right: 9rem;
+    font-weight: bold;
+}
+.form-group input, .form-group textarea {
+    padding-left: 20%;
+    flex: 2;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+.form-group textarea {
+    resize: none;
+    height: 80px;
+}
+    
+

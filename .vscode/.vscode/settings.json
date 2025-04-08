@@ -1,0 +1,6 @@
+{
+    "git.decorations.enabled": true,
+    "git.enabled": true,
+    "git.enableCommitSigning": true,
+    "git.ignoreLimitWarning": true
+}

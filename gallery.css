@@ -1,0 +1,196 @@
+header{
+    display: flex;
+    color: white;
+    position: fixed;
+    width: 100vw;
+    height: 5rem;
+    background-color: whitesmoke;
+    margin: 0%;
+    z-index: 1000;
+    gap: 50%;
+    transition: opacity 0.3 ease-in-out;
+    opacity: 0.3;
+
+}
+/*hover over header*/
+header:hover{ 
+    opacity: 1;
+}
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+/*hover over navigation*/
+nav a:hover {
+    text-decoration:underline;
+    color: yellow;
+}
+/*size the icons*/
+nav img{
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+}
+
+/* Heading Fade-in Effect */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+/* Active Section Heading */
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+.logo{
+    padding: 1.5rem;
+    padding-left: 10%;
+    flex: left;
+}
+.logo img{
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+}
+
+div.navigation{
+    display: grid;
+    grid-template-rows: repeat(5, 100px);
+    gap: 20%;
+    text-align: right;
+    padding: 1.5rem;
+    flex: right;
+    width: 60rem;
+}
+
+body{
+    height: 100vh;
+    width: 100vw;
+    background-color: aliceblue;
+    
+}
+section{
+    
+    scroll-behavior: smooth;
+    margin: 1rem;
+    padding: 1rem;
+    justify-self: center;
+    justify-content: center;
+}
+#story{
+    height: 100vh;
+    background-color: pink;
+}
+#gallery{
+    height: 300vh;
+    background-color: red;
+}
+#contact{
+    height: 50vh;
+    background-color: blue;
+}
+
+/* aligning content */
+#content{
+    width: 87vw;
+    height: 80vh;
+    margin: 4rem;
+    background-color:white;
+}
+/* aligning visuals*/
+#story .content{
+    margin-top: 5%;
+    margin-left: 4rem;
+    margin-right: 4rem;
+    width: 87vw;
+    height: 80vh;
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    background-color: aqua;
+}
+#story .content img{
+    align-self: center;
+    width: 100%;
+    height: 50vh;
+    background-color: black;
+}
+.text{
+    text-align: center;
+}
+
+#gallery h1{
+    text-align: center;
+}
+.container{
+    margin-top: 10%;
+    margin-left: 4rem;
+    margin-right: 4rem;
+    width: 87vw;
+    height: 260vh;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5%;
+    background-color: aliceblue;
+}
+
+.left{
+    display: grid;
+    grid-template-rows: repeat(6, auto);
+}
+.left img{
+    background-color: black;
+    width: 100%;
+    height: 100%;
+}
+.right{
+    display: grid;
+    grid-template-rows: repeat(6, auto);
+}
+.right img{
+    background-color: black;
+    width: 100%;
+    height: 100%;
+}   
+.middle{
+    display: grid;
+    grid-template-rows: repeat(6, auto);
+}
+.middle img{
+    background-color: black;
+    width: 100%;
+    height: 100%;
+}
+#contact .content{
+    background-color: aliceblue;
+    margin-top: 5%;
+    margin-left: 4rem;
+    margin-right: 4rem;
+    width: 87vw;
+    height: 70%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+#contact .content img{
+    place-self: center;
+    height: 60%;
+    width: 60%;
+    border-radius: 0%;
+    background-color: black;
+}
+.social{
+    place-self: center;
+}
+.button{
+    display: flex;
+}
+button{
+    place-self: center;
+    width: 40%;
+    height: 10%;
+}
+
