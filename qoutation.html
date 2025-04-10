@@ -55,8 +55,10 @@
                         <input type="checkbox" class="checkbox-queens" value="20 Liters/ 100 Cakes" data-price="600.00">
                         20 Liters/ 100 cakes <span>R600.00</span>
                     </div>
-                    <input type="number" class="quantity-input" min="1" value="1">
-                    Quantity
+                    <div class="quantity">
+                        <input type="number" class="quantity-input" min="1" value="1" required>
+                        <lable for="quantity-input">Quantity</lable>
+                        </div>
                 </div>
                 <div class="add-chat">
                     <button>Add Chat</button>
@@ -87,8 +89,10 @@
                             <input type="checkbox" class="checkbox-scones" value="20 Liters/ 140 Cakes" data-price="600.00">
                             20 Liters/ 100 cakes <span>R600.00</span>
                         </div>
-                        <input type="number" class="quantity-input" min="1" value="1">
-                        Quantity
+                        <div class="quantity">
+                            <input type="number" class="quantity-input" min="1" value="1" required>
+                            <lable for="quantity-input">Quantity</lable>
+                            </div>
                     </div>
                     <div class="add-chat">
                         <button>Add Chat</button>
@@ -118,9 +122,10 @@
                             <input type="checkbox" class="checkbox-biscuits" value="20 Liters" data-price="1000.00">
                             20 Liters/<span>R1 000.00</span>
                         </div>
-                        
-                        <input type="number" class="quantity-input" min="1" value="1" placeholder="Quantity">
-                        
+                        <div class="quantity">
+                        <input type="number" class="quantity-input" min="1" value="1" required>
+                        <lable for="quantity-input">Quantity</lable>
+                        </div>
                     </div>
                     <div class="add-chat">
                         <button>Add Chat</button>
@@ -132,16 +137,39 @@
         </div>
     </section>
     <section id="mixedgoodies">
-        <div class="content">
-            <div class="top">
+        <div class="content-mixedgoodies">
+            <div class="top-mixedgoodies">
                 <h1>Mixed Goodies</h1>
-                <p>hefskhkfbsdkjf djfbdjg dfg</p>
-                <h5>select and scoll to get qoute</h5>
+                <p>hefskhkfbsdkjf djfbdjg dfg <br>
+                select and scoll to get qoute</p>
             </div>
             
-            <div class="bottom">
-                <div class="left"></div>
-                <div class="right"></div>
+            <div class="bottom-mixedgoodies">
+                <div class="left-mixedgoodies">
+                    <div class="goodies-pictuer">
+                        <img src="">
+                    </div>
+                    <div class="goodies-items">
+                        Jemtart<br> Rad cake<br> Biscuits<br> Muffins
+                    </div>
+                </div>
+                <div class="right-mixedgoodies">
+                    <div class="goodies-option1">
+                    <input type="checkbox" class="checkbox-mixedgoodies" value="20 Liters" data-price="1200.00">
+                            20 Liters<span>R1 200.00</span>
+                </div>
+                <div class="goodies-option2">
+                    <input type="checkbox" class="checkbox-mixedgoodies" value="10 Liters" data-price="600.00">
+                            10 Liters<span>R600.00</span>
+                </div>
+                <div class="goodies-option3">
+                    <input type="checkbox" class="checkbox-mixedgoodies" value="Tin" data-price="400.00">
+                            Tin<span>R400.00</span>
+                </div>
+                <div class="add-chat">
+                    <button>Add Chat</button>
+                </div>
+            </div>
         </div>
         </div>
     </section>

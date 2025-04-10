@@ -85,11 +85,11 @@ section{
     height: 100vh;
     background-color: pink;
 }
-#celebrationcake{
-    height: 100vh;
+#mixedgoodies{
+    height: 75vh;
     background-color: red;
 }
-#goodiesmix{
+#celebrationcake{
     height: 100vh;
     background-color: blue;
 }
@@ -105,7 +105,7 @@ section{
     margin: 4rem;
     background-color:white;
 }
-/* aligning visuals*/
+/* aligning mini cake visuals*/
 #minicake .content{
     display: grid;
     grid-template-rows: 20% 75%;
@@ -188,4 +188,46 @@ section{
         height: 35%;
         margin: 0%;
 
-    }    
+    }
+/* aligning mixed goodies visuals*/
+.content-mixedgoodies{
+    width: 87vw;
+    height: 60vh;
+    margin: 4rem;
+    background-color:white;
+    display: grid;
+    grid-template-rows: 20% 75%;
+}       
+.top-mixedgoodies{
+    width: 100%;
+    background-color: aqua;
+    text-align: center;
+}
+.bottom-mixedgoodies{
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 60% 40%;
+    gap: 5%;
+}
+.left-mixedgoodies{
+    display: grid;
+    grid-template-columns: 60% 20%;
+}
+.goodies-pictuer img{
+    height: 100%;
+    width: 100%;
+    border-radius: 100%;
+    background-color: black;
+}
+.goodies-items{
+    text-align: center;
+    justify-content: center;
+}
+.right-mixedgoodies{
+    display: grid;
+    grid-template-rows: repeat(4, 25%);
+}
+.content-mixedgoodies{
+    
+}
