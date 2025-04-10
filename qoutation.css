@@ -110,3 +110,82 @@ section{
     display: grid;
     grid-template-rows: 20% 75%;
 }
+.top-minicake{
+    width: 100%;
+    background-color: aqua;
+    text-align: center;
+}
+.bottom-minicake .minicake{
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 30%);
+    gap: 5%;
+}
+#queens{
+    display: grid;
+    grid-template-rows: 30% 70%;
+    gap: 2%;
+    text-align: center;
+}
+#queens h3{
+    margin: 0%;
+}
+.top-queens img{
+    width: 75%;
+    height: 70%;
+    background-color: black;
+}
+.bottom-queens{
+    display: grid;
+    grid-template-rows: 80% 20%;
+}
+#options{
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-rows: repeat(5, 19%);
+    gap: 2%;
+    }
+    #scones{
+        display: grid;
+        grid-template-rows: 30% 70%;
+        gap: 2%;
+        text-align: center;
+    }
+    #scones h3{
+        margin: 0%;
+    }
+    .top-scones img{
+        width: 75%;
+        height: 70%;
+        background-color: black;
+    }
+    .bottom-scones{
+        display: grid;
+        grid-template-rows: 80% 20%;
+    }
+    #biscuits{
+        display: grid;
+        grid-template-rows: 30% 70%;
+        gap: 2%;
+        text-align: center;
+    }
+    #biscuits h3{
+        margin: 0%;
+    }
+    .top-biscuits img{
+        width: 75%;
+        height: 70%;
+        background-color: black;
+    }
+    .bottom-biscuits{
+        display: grid;
+        grid-template-rows: 80% 20%;
+    }
+    .quantity-input{
+        width: 20%;
+        height: 35%;
+        margin: 0%;
+
+    }    
