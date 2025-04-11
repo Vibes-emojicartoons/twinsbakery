@@ -93,8 +93,8 @@ section{
     height: 100vh;
     background-color: blue;
 }
-#qoutation{
-    height: 100vh;
+#cake-topping{
+    height: 80vh;
     background-color: yellowgreen;
 }
 
@@ -303,4 +303,75 @@ section{
 .cup-cakes{
     text-align: center;
     background-color: red;
+}
+/* Aligning cake topping */
+.content-caketopping{
+    width: 87vw;
+    height: 60vh;
+    margin: 4rem;
+    background-color:white;
+    display: grid;
+    grid-template-rows: 20% 90%;
+} 
+.top-topping{
+    width: 100%;
+    background-color: aqua;
+    text-align: center;
+}
+.bottom-topping{
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-rows: 75% 15%;
+    gap: 5%;
+}
+.topping{
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+.left-topping{
+    background-color: cornflowerblue;
+    display: grid;
+    grid-template-rows: repeat(3, 30%);
+}
+.right-topping{
+    background-color: darkkhaki;
+    display: grid;
+    grid-template-rows: repeat(3, 30%);
+}
+.topping-pic{
+    width: 100%;
+    height: 100%;
+    background-color: black;
+}
+.letters{
+    display: grid;
+    grid-template-columns: 40% 30% 30%;
+}
+.polystyren{
+    display: grid;
+    grid-template-columns: 40% 30% 30%;
+
+}
+.flower{
+    display: grid;
+    grid-template-columns: 40% 30% 30%;
+}
+.cake-print{
+    display: grid;
+    grid-template-columns: 40% 60%;
+}
+.cupcake-print{
+    display: grid;
+    grid-template-columns: 40% 60%;
+}
+.custom-topping{
+    display: grid;
+    grid-template-columns: 40% 60%;
+
+}
+.add-topping{
+    display: flex;
+    place-items: center;
+    place-content: center;
 }
