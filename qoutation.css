@@ -311,7 +311,8 @@ section{
     margin: 4rem;
     background-color:white;
     display: grid;
-    grid-template-rows: 20% 90%;
+    grid-template-rows: 20% 80%;
+    
 } 
 .top-topping{
     width: 100%;
@@ -322,12 +323,12 @@ section{
     height: 100%;
     width: 100%;
     display: grid;
-    grid-template-rows: 75% 15%;
-    gap: 5%;
+    grid-template-rows: 85% 15%;
 }
 .topping{
     display: grid;
     grid-template-columns: 50% 50%;
+    height: 100%;
 }
 .left-topping{
     background-color: cornflowerblue;
@@ -340,7 +341,8 @@ section{
     grid-template-rows: repeat(3, 30%);
 }
 .topping-pic{
-    width: 100%;
+    margin-left: 30%;
+    width: 50%;
     height: 100%;
     background-color: black;
 }
@@ -374,4 +376,27 @@ section{
     display: flex;
     place-items: center;
     place-content: center;
+}
+h2{
+    padding: 0%;
+}
+#place-order .content{
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+.left-order{
+    display: grid;
+    grid-template-rows: 50% 50%;
+}
+#message{
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+.right-order{
+    display: grid;
+    grid-template-rows: 45% 45% 10%;
+}
+#note3{
+    display: grid;
+    grid-template-columns: 50% 50%;
 }

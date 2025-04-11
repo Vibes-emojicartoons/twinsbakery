@@ -16,9 +16,9 @@
         </div>
         <div class="navigation"> 
         <nav>
-            <a href="story"><img src="icons/home.png"></a>
-            <a href="gallery"><img src="icons/offer.png"></a>
-            <a href="contact"><img src="icons/contact.png">></a>
+            <a href="story"><img src="icons/qoutation.png">
+                <span class="cart-count" id="cart-count">0</span></a>
+            
         </nav>
 </div>
     </header>
@@ -140,7 +140,7 @@
         <div class="content-mixedgoodies">
             <div class="top-mixedgoodies">
                 <h1>Mixed Goodies</h1>
-                <p>hefskhkfbsdkjf djfbdjg dfg <br>
+                <p>
                 select and scoll to get qoute</p>
             </div>
             
@@ -340,7 +340,7 @@
     <section id="cake-topping">
         <div class="content-caketopping">
             <div class="top-topping">
-                <h1>Cake Topping</h1>
+                <h2>Cake Topping</h2>
                 <p>hefskhkfbsdkjf djfbdjg dfg <br>
                 These are toppings that are added to your custom cake design.</p>
             </div>
@@ -394,7 +394,7 @@
                         <img src="" class="topping-pic">
                         <div class="checkbox">
                             <input type="checkbox" class="cup-print" data-price="250.00" options>
-                            <lable for="cup-print">Cup Cake Print: R250.00</lable>
+                            <lable for="cup-print">Cup Cake Print: R360.00 <br> (min of 12 cakes)</lable>
                         </div>
                     </div>
                     <div class="custom-topping">
@@ -414,13 +414,55 @@
     </section>
     <section id="place-order">
         <div class="content">
-            <div class="left">
-                <div id="message"></div>
-                <div id="items"></div>
+            <div class="left-order">
+                <div id="message">
+                    <div class="note1">Please kindly feather <br> describe your desired look of your cake <br> according to what you have invisioned, along with <br> uploading an image of <br> inspiration.</div>
+                    <div class="note2">
+                        <div class="text">
+                        <label for="description">Message:</label>
+                                <textarea id="description" name="description" required></textarea>
+                            </div>
+                            <div class="upload">
+                                <label for="file-upload" class="custom-btn">Choose File</label>
+    <input type="file" id="file-upload" />
+    <div class="file-name" id="file-name"></div>
+                            </div>
+                    </div>
+                </div>
+                <div id="items">
+                    <h3>Your Qoutation</h3>
+                    <ul id="selected-items"></ul>
+                    <p><strong>Toltal Cost: R<span id="total-cost">0</span></strong></p>
+                    <button onclick="sendQuotation()">Send Quotation</button>
+                </div>
             </div>
-            <div class="right">
-                <div id="note"></div>
-                <div id="fill"></div>
+            <div class="right-order">
+                <div id="note3">
+                    <div class="logo">
+                        <h1>NOTE:</h1>
+                        <img src="">
+                    </div>
+                    <div class="note4">
+                        Kindly note that if there are is <br> any addition requests <br> towards your cake, price may <br> rise according to your <br> specifications
+                    </div>
+                </div>
+                <div id="fill">
+                    <div class="form-group">
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">WhatsApp #:</label>
+                        <input type="tel" id="phone" name="phone" required>
+                    </div>
+                </div>
+                <div class="place-order">
+                    <button>Place order here.</button>
+                </div>
                 </div>
                 
             </div>
