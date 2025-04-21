@@ -224,7 +224,7 @@ section{
     text-align: center;
     justify-content: center;
 }
-.right-mixedgoodies{
+#right-mixedgoodies{
     display: grid;
     grid-template-rows: repeat(4, 25%);
 }
