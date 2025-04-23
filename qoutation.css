@@ -115,7 +115,7 @@ section{
     background-color: aqua;
     text-align: center;
 }
-.bottom-minicake .minicake{
+.bottom-minicake #minicake-options{
     height: 100%;
     width: 100%;
     display: grid;
