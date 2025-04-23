@@ -15,26 +15,27 @@ function updateCartCount() {
 
 // Fuction to add seleceted items to cart//
 function addSelectedItemsToCart() {
-    // let's work with mini cakes//
-    const minicakeSection = document.getElementById('minicake');
-    const minicakeChecked = minicakeSection.querySelector(".minicake").checked;
+    let total = 0;
+    let output = "Cake Order Summary:\n";
 
 
+    if (document.getElementById(minicake-options).checked){
+        
+        const output = document.getElementById("cart-display");
+        const checkboxes = document.querySelectorAll('input[type="checkbox"]:checked');
+        checkboxes.forEach(checkbox => {
+            const price = parseFloat (checkbox.getAttribute("data-price"));
+            const total = price * quantity;
+            totalPrice += total;
+            summary += '<p>${checkbox.value} - R${price.toFixed(2)} x ${quantity} = <strong>R${total.toFixed(2)}</strong></p>';
 
-
-    // let's work with mixed goodies//
-    const mixedGoodiesSection = document.getElementById('mixedgoodies');
-    const mixedGoodiesChecked = mixedGoodiesSection.querySelector(".bottom-mixedgoodies").checked;
-
-
-    // let's work with celebration cakes//
-    const celebrationCakeSection = document.getElementById('celebrationcake');
-    const celebrationCakeChecked = celebrationCakeSection.querySelector(".bottom-celebration").checked;
-
-
-    // let's work with cake toppings//
-    const cakeToppingSection = document.getElementById('cake-topping');
-    const cakeToppingChecked = cakeToppingSection.querySelector(".topping").checked;
-
-    
+        });
+        const quantityInput = document.querySelector(".quantity-input");
+        const quantity = parseInt(quantityInput.value, 10) || 1;
+        if ( checkboxes.length ===0){
+            alert('Please select at least one option in ${title}.');
+            return;
+        }
+        
+    }
 }
