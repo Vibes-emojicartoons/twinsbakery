@@ -183,15 +183,15 @@
             <div class="bottom-celebration">
                 <div id="onetire" >
                     <div class="onetire-cake">
-                        <input type="checkbox" class="1tire-cake" options>
-                        <label for="1tire-cake">1 Tire cake</label>
+                        
+                        <label for="1tire-cake"> <input type="checkbox" id="1tire-cake" options>1 Tire cake</label>
                     </div>
                     <div class="vector">
                         <img src="">
                     </div>
                     <div class="celebration-options">
                         <label for="occasion">Occasion:</label>
-                        <select class="occasion">
+                        <select id="occasion1">
                             <option value="">Select Occasion</option>
                             <option value="Birthday Cake">Birthday Cake</option>
                             <option value="Wedding Cake">Wedding Cake</option>
@@ -199,13 +199,13 @@
                             <option value="Anniversaty Cake">Anniversaty Cake</option>
                         </select>
                         <label for="size">Size:</label>
-                        <select class="size">
+                        <select id="size1">
                             <option value="">Select Size</option>
                             <option value="15cm" data-price="750.00">15cm serve:24 people R750.00</option>
                             <option value="20cm" data-price="1100.00">20cm serve:36 people R1 100.00</option>
                         </select>
                         <label for="flavour">Flavour:</label>
-                            <select class="flavour">
+                            <select id="flavour1">
                                 <option value="">Select Flavour</option>
                                 <option value="Vanilla">Vanilla</option>
                                 <option value="Chocolate">Chocolate</option>
@@ -214,20 +214,20 @@
 
                     </div>
                     <div class="add-cart2">
-                        <button onclick="addSelectedToCart()">Add Cart</button>
+                        <button onclick="addSelectedToCart('1tire-cake')">Add Cart</button>
                     </div>
                 </div>
                 <div id="twotire" >
                     <div class="twotire-cake">
-                        <input type="checkbox" class="2tire-cake" options>
-                        <label for="2tire-cake">2 Tire cake</label>
+                        
+                        <label for="2tire-cake"><input type="checkbox" id="2tire-cake" options> 2 Tire cake</label>
                     </div>
                     <div class="vector">
                         <img src="">
                     </div>
                     <div class="celebration-options">
                         <label for="occasion">Occasion:</label>
-                        <select class="occasion">
+                        <select id="occasion2">
                             <option value="">Select Occasion</option>
                             <option value="Birthday Cake">Birthday Cake</option>
                             <option value="Wedding Cake">Wedding Cake</option>
@@ -235,20 +235,20 @@
                             <option value="Anniversaty Cake">Anniversaty Cake</option>
                         </select>
                         <label for="size">Size:</label>
-                        <select class="size">
+                        <select id="size2">
                             <option value="">Select Size</option>
                             <option value="37cm" data-price="2100.00">15cm and 22cm serve:50+ people R2 100.00</option>
                             
                         </select>
                         <label for="flavour">Top Flavour:</label>
-                            <select class="top-flavour">
+                            <select id="top-flavour2">
                                 <option value="">Select Flavour</option>
                                 <option value="Vanilla">Vanilla</option>
                                 <option value="Chocolate">Chocolate</option>
 
                             </select>
                             <lable for="flavour">Bottom Flavour:</lable>
-                            <select class="bottom-flavour">
+                            <select id="bottom-flavour2">
                                 <option value="">Select Flavour</option>
                                 <option value="Vanilla">Vanilla</option>
                                 <option value="Chocolate">Chocolate</option>
@@ -257,20 +257,20 @@
 
                     </div>
                     <div class="add-cart2">
-                        <button onclick="addSelectedToCart()">Add Cart</button>
+                        <button onclick="addSelectedToCart('2tire-cake')">Add Cart</button>
                     </div>
                 </div>
                 <div id="banto" >
                     <div class="banto">
-                        <input type="checkbox" class="banto" options>
-                        <label for="2tire-cake">Banto Cake</label>
+                        
+                        <label for="2tire-cake"><input type="checkbox" id="banto3" options>Banto Cake</label>
                     </div>
                     <div class="vector">
                         <img src="" alt="banto cake">
                     </div>
                     <div class="celebration-options">
                         <label for="occasion">Occasion:</label>
-                        <select class="occasion">
+                        <select id="occasion3">
                             <option value="">Select Occasion</option>
                             <option value="Birthday Cake">Birthday Cake</option>
                             <option value="Baby Shower Cake">Baby Shower Cake</option>
@@ -278,27 +278,27 @@
                         </select>
 
                         <label for="size">Size:</label>
-                        <select class="size">
+                        <select id="size3">
                             <option value="">Select Size</option>
                             <option value="12cm" data-price="550.00">12cm with 5 cup cakes R550.00</option>
                         </select>
 
                         <label for="flavour">Flavour:</label>
-                            <select class="flavour">
+                            <select id="flavour4">
                                 <option value="">Select Flavour</option>
                                 <option value="Vanilla">Vanilla</option>
                                 <option value="Chocolate">Chocolate</option>
                             </select>
                         </div>
                     <div class="add-cart2">
-                        <button onclick="addSelectedToCart()">Add Cart</button>
+                        <button onclick="addSelectedToCart('banto3')">Add Cart</button>
                     </div>
                 </div>
                 <div id="cupcakes" >
                     <div class="cup-cakes">
                         
-                            <input type="checkbox" class="cup-cakes" options>
-                            <lable for="cup-cakes">Muffin Cake</lable>
+                            
+                            <lable for="cup-cakes"><input type="checkbox" id="cup-cakes" options>Muffin Cake</lable>
                         
                     </div>
                     <div class="vector">
@@ -306,7 +306,7 @@
                     </div>
                     <div class="celebration-options">
                         <label for="occasion">Occasion:</label>
-                        <select class="occasion">
+                        <select id="occasion4">
                             <option value="">Select Occasion</option>
                             <option value="Birthday Cake">Birthday</option>
                             <option value="Wedding Cake">Wedding</option>
@@ -317,13 +317,13 @@
                         <label for="quantity">Quantity</label>
                         <input type="number" placeholder="min. of 12 cup cakes" min="12" data-price="">
                         <label for="flavour">Flavour:</label>
-                            <select class="flavour">
+                            <select id="flavour4">
                                 <option value="">Select Flavour</option>
                                 <option value="Vanilla">Vanilla</option>
                                 <option value="Chocolate">Chocolate</option>
                             </select>
                             <label for="model">Model:</label>
-                            <select class="model">
+                            <select id="model">
                                 <option value="">Select Model</option>
                                 <option value="plain" data-price="25.00">plain R25.00 each</option>
                                 <option value="2D" data-price="35.00">2D print R30.00 each</option>
@@ -332,7 +332,7 @@
                             </select>
                     </div>
                     <div class="add-cart2">
-                        <button onclick="addSelectedToCart()">Add Cart</button>
+                        <button onclick="addSelectedToCart('cup-cakes')">Add Cart</button>
                     </div>
                 </div>
         </div>
@@ -345,16 +345,16 @@
                 These are toppings that are added to your custom cake design.</p>
             </div>
             <div class="bottom-topping">
-                <div class="topping">
+                <div id="topping">
                     <div class="left-topping">
                         <div class="letters">
                             <img src="" class="topping-pic">
                             <div class="checkbox">
-                            <input type="checkbox" class="letters" data-price="5.00" options>
+                            <input type="checkbox" id="letters" data-price="5.00" options>
                             <label for="letters">Letters: R5.00</label>
                         </div>
                         <div class="quant">
-                            <input type="number" class="quantity-letters" min="1" value="1" required>
+                            <input type="number" id="quantity-letters" min="1" value="1" required>
                             <label for="quantity-letters">Quantity</label>
                         </div>
                         
@@ -362,19 +362,19 @@
                         <div class="polystyren">
                             <img src="" class="topping-pic">
                             <div class="checkbox">
-                            <input type="checkbox" class="polystyren" data-price="5.00" options>
+                            <input type="checkbox" id="polystyren" data-price="5.00" options>
                             <lable for="letters">Polystyren Balls: R5.00</lable>
                         </div>
                         <div class="quant">
-                            <input type="number" class="quantity-polystyren" min="1" value="1" required>
+                            <input type="number" id="quantity-polystyren" min="1" value="1" required>
                         <lable for="quantity-polystyren">Quantity</lable>
                     </div>
                         </div>
                         <div class="flower">
                             <img src="" class="topping-pic">
                             <div class="checkbox">
-                            <input type="checkbox" class="flower" data-price="5.00" options>
-                            <label for="letters">Flower Stem: R5.00</label>
+                            <input type="checkbox" id="flower" data-price="5.00" options>
+                            <label for="flower">Flower Stem: R5.00</label>
                         </div>
                             <div class="quant">
                        <input type="number" class="quantity-flower" min="1" value="1" required>
@@ -386,28 +386,28 @@
                     <div class="cake-print">
                         <img src="" class="topping-pic">
                         <div class="checkbox">
-                            <input type="checkbox" class="cakeprint" data-price="150.00" options>
+                            <input type="checkbox" id="cakeprint" data-price="150.00" options>
                             <label for="cake-print">Cake Print: R150.00</label>
                         </div>
                     </div>
                     <div class="cupcake-print">
                         <img src="" class="topping-pic">
                         <div class="checkbox">
-                            <input type="checkbox" class="cup-print" data-price="250.00" options>
+                            <input type="checkbox" id="cup-print" data-price="250.00" options>
                             <label for="cup-print">Cup Cake Print: R360.00 <br> (min of 12 cakes)</label>
                         </div>
                     </div>
                     <div class="custom-topping">
                         <img src="" class="topping-pic">
                         <div class="checkbox">
-                            <input type="checkbox" class="customtopping" data-price="250.00" options>
+                            <input type="checkbox" id="customtopping" data-price="250.00" options>
                             <label for="customtopping">Custom Topping: R250.00</label>
                         </div>
                     </div>
                 </div>
                 </div>
                 <div class="add-topping">
-                    <button onclick="addSelectedToCart()">Add cart</button>  
+                    <button onclick="addSelectedToCart('topping')">Add cart</button>  
                 </div>
             </div>
         </div>
