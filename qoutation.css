@@ -24,9 +24,9 @@ nav a {
     transition: color 0.3s;
 }
 /*hover over navigation*/
-nav a:hover {
+nav a{
     text-decoration:underline;
-    color: yellow;
+    color: black;
 }
 /*size the icons*/
 nav img{
@@ -98,6 +98,7 @@ section{
     background-color: yellowgreen;
 }
 
+
 /* aligning content */
 .content{
     width: 87vw;
@@ -109,10 +110,25 @@ section{
 #minicake .content{
     display: grid;
     grid-template-rows: 20% 75%;
+    gap: 5%;
 }
 .top-minicake{
     width: 100%;
     background-color: aqua;
+    margin-bottom: 30px;
+    text-align: center;
+
+}
+.top-minicake h1{
+    font-family: Rancho;
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+
+.top-minicake p{
+    font-family: Comic Sans MS;
+    font-size: clamp(1rem, 3.5vw, 1rem);
+    margin-bottom: 0 auto;
     text-align: center;
 }
 .bottom-minicake #minicake-options{
@@ -121,6 +137,12 @@ section{
     display: grid;
     grid-template-columns: repeat(3, 30%);
     gap: 5%;
+}
+#minicake-options h3{
+    font-family: Rancho;
+    font-size: 1.5rem;
+    font-weight: 100;
+
 }
 #queens{
     display: grid;
@@ -399,4 +421,7 @@ h2{
 #note3{
     display: grid;
     grid-template-columns: 50% 50%;
+}
+#footer{
+    display: grid;
 }
