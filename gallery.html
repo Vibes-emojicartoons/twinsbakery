@@ -4,75 +4,183 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="gallery.css">
-    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>gallery</title>
 </head>
-    <header>
-        <div class="logo">
-            
+    <body>
+    <header class="py-4">
+        <div class="container header-content">
+            <div class="logo">
                 <a href="index.html">
-                    <img src="icons/logo.png">
-                </a>                
-            
+                    <img src="icons/logo_icon.png">
+                </a>
+            </div>
+            <div class="navigation">
+                <nav class="flex space-x-6">
+                    <a href="index.html" title="Home">
+                        
+                        <i class="fas fa-home"><h3>Home</h3></i>
+                    </a>
+                    <a href="qoutation.html">
+                        <i class="fas fa-orderher"><h3>Order here</h3></i>
+                    </a>
+                </nav>
+            </div>
         </div>
-        <div class="navigation"> 
-        <nav>
-            <a href="story"><img src="icons/home.png"></a>
-            <a href="gallery"><img src="icons/offer.png"></a>
-            <a href="contact"><img src="icons/contact.png">></a>
-        </nav>
-</div>
     </header>
-<body>
+    
     <section id="story">
-        <div class="content" >
-        <div class="text">
-            <h1>Our Story</h1>
-            <p>sjeahf dshffbehvb rjgreigb rigdjfbj ejgfj hef f j ibfhebfefb eoffbj</p>
+        <div class="container mx-auto px-4">
+            <div class="content">
+                <div class="text">
+                    <h1>Our <span>Story</span></h1>
+                    <p>Twins Bakery is a heartwarming venture founded by two twin sisters (Manzima & Qabu) who inherited their love for baking from their late mother. Growing up in the small neighbourhood of Kilani, the sisters spent countless hours in the kitchen, learning family recipes and perfecting their craft. They began their journey of selling baked goods around their neighbourhood and at busy bus stops, quickly gaining a loyal customer base drawn to their delicious treats and warm personalities.</p>
+                    <p> Specializing in cakes and custom cakes, they soon became known for their unique designs and flavours that cater to every celebration. As word spread and demand increased, the twins expanded their operations, eventually baking in larger quantities to serve their growing community. Today, Twins Bakery stands as a tribute to their mother's legacy and their shared passion for bringing people together through baked goods.</p>
+                </div>
+                <div class="image-placeholder h-96">
+                    <img src="icons/logo_2.png">
+                </div>
+            </div>
         </div>
-        <img src="">
-    </div>
     </section>
+    
     <section id="gallery">
-        <h1>Gallery</h1>
-        <div class="container">
-        <div class="left">
-            <img src="">
-            <img src="">
-            <img src="">
-            <img src="">
-            <img src="">
-            <img src="">
+        <div class="container mx-auto px-4">
+            <h1>Our <span>Gallery</span></h1>
+            
+            <div class="gallery-grid">
+                <!-- Column 1 -->
+                <div class="gallery-img">
+                    <i class="fas fa-image">
+                        <img src="pictures/image1.jpg">
+                    </i>
+                </div>
+                <div class="gallery-img">
+                    <i class="fas fa-image">
+                        <img src="pictures/cupcake2.jpg">
+                    </i>
+                </div>
+                <div class="gallery-img">
+                    <i class="fas fa-image">
+                        <img src="pictures/image3.jpg">
+                    </i>
+                </div>
+                <div class="gallery-img">
+                    <i class="fas fa-image">
+                        <img src="pictures/image4.jpg">
+                    </i>
+                </div>
+                
+                <!-- Column 2 -->
+                <div class="gallery-img">
+                    <i class="fas fa-image">
+                        <img src="pictures/image5.jpg">
+                    </i>
+                </div>
+                <div class="gallery-img">
+                    <i class="fas fa-image">
+                        <img src="pictures/image6.jpg">
+                    </i>
+                </div>
+                <div class="gallery-img">
+                    <i class="fas fa-image">
+                        <img src="pictures/image9.jpg">
+                    </i>
+                </div>
+                <div class="gallery-img">
+                    <i class="fas fa-image">
+                        <img src="pictures/image15.jpg">
+                    </i>
+                </div>
+                
+                <!-- Column 3 -->
+                <div class="gallery-img">
+                    <i class="fas fa-image">
+                        <img src="pictures/image11.jpg">
+                    </i>
+                </div>
+                <div class="gallery-img">
+                    <i class="fas fa-image">
+                        <img src="pictures/image12.jpg">
+                    </i>
+                </div>
+                <div class="gallery-img">
+                    <i class="fas fa-image">
+                        <img src="pictures/cupcake1.jpg">
+                    </i>
+                </div>
+                <div class="gallery-img">
+                    <i class="fas fa-image">
+                        <img src="pictures/image14.jpg">
+                    </i>
+                </div>
+                <!--Column 4-->
+                <div class="gallery-img">
+                    <i class="fas fa-image">
+                        <img src="pictures/image19.jpg">
+                    </i>
+                </div>
+                <div class="gallery-img">
+                    <i class="fas fa-image">
+                        <img src="pictures/image18.jpg">
+                    </i>
+                </div>
+                <div class="gallery-img">
+                    <i class="fas fa-image">
+                        <img src="pictures/image8.jpg">
+                    </i>
+                </div>
+                
+            </div>
         </div>
-        <div class="middle">
-            <img src="">
-            <img src="">
-            <img src="">
-            <img src="">
-            <img src="">
-            <img src="">
-        </div>
-        <div class="right">
-            <img src="">
-            <img src="">
-            <img src="">
-            <img src="">
-            <img src="">
-            <img src="">
-        </div>
-    </div>
     </section>
+    
     <section id="contact">
-        <div class="content" >
-        <img src="">
-        <div class="social">
-        <a><h3>Facebook</h3></a>
-        <a><h3>Instagram<h3></a>
-        <a><h3>Tik Tok<h4></a>
+        <div class="container mx-auto px-4">
+            <div class="content">
+                <div class="image-placeholder h-96">
+                    <img src="icons/logo_2.png">
+                </div>
+                <div class="contact-info">
+                    <h2>Get in <span>Touch</span></h2>
+                    <div class="info">
+                    
+                    <div class="hours">
+                        <h3>Hours:</h3><br>
+                        <h4>Tue-Sun
+                            <br>
+                            Open: 08:00
+                            <br>
+                            Close: 17:00
+                        </h4>
+                    </div>
+                    <div class="address">
+                        <h3>Address:</h3><br>
+                        <h4>4143
+                            <br>
+                            Lesolang street
+                            <br>
+                            Orland West</h4>
+                    </div>
+                    </div>
+                    
+                    <div class="button mt-8">
+                       <a href="qoutation.html"> 
+                        <button class="order-btn">
+                            Place order here!
+                            <i class="fas fa-arrow-right"></i>
+                        </button>
+                        </a>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="button">
-        <button>Pleace order here!</button>
-        </div>
-    </div>
     </section>
+    <footer>
+        <div class="container footer-content">
+            <p>&copy; 2023 Sweet Delights Bakery. All rights reserved.</p>
+        
+        </div>
+    </footer>
+    
 </body>
-</html>

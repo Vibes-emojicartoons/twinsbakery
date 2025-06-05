@@ -65,19 +65,19 @@
             width: 48px;
             height: 48px;
             border-radius: 50%;
-            background-color: var(--primary-color);
             color: var(--white-color);
             font-weight: bold;
-            font-size: 1.5rem;
+            font-size: 1.2rem;
             display: flex;
             align-items: center;
             justify-content: center;
         }
         
         .logo-text {
+            font-family: Rancho;
             margin-left: 10px;
             font-size: 1.5rem;
-            font-weight: bold;
+            font-weight: 600;
             color: var(--primary-color);
             display: none;
         }
@@ -89,17 +89,16 @@
         
         .nav-icon {
             padding: 8px;
-            border-radius: 50%;
-            transition: all 0.3s ease;
+            transition: all 0.5s ease;
         }
         
         .nav-icon:hover {
-            background-color: rgba(236, 89, 136, 0.1);
-            transform: translateY(-5px);
+            color: var(--primary-color); 
         }
         
         .nav-icon i {
-            color: var(--primary-color);
+            font-family: Rancho;
+            color: #666;
             font-size: 1.5rem;
         }
         
@@ -125,6 +124,8 @@
             transition: all 0.3s ease;
             border: none;
             cursor: pointer;
+            font-family:Comic Sans MS;
+
         }
         
         .btn:hover {
@@ -134,7 +135,7 @@
         }
         
         .placeholder-img {
-            background-color: var(--gray-light);
+            
             display: flex;
             align-items: center;
             justify-content: center;
@@ -165,19 +166,22 @@
         }
         
         .hero-text h3 {
-            font-size: 2rem;
+            font-size: 3rem;
             font-weight: bold;
             color: var(--primary-color);
             margin-bottom: 15px;
+            font-family: Rancho;
         }
         
         .hero-text p {
             color: var(--gray-dark);
             font-size: 1.1rem;
             margin-bottom: 20px;
+            font-family:Comic Sans MS;
         }
         
         .hero-text h6 {
+            font-family:Comic Sans MS;
             font-size: 0.9rem;
             color: var(--gray-medium);
             font-style: italic;
@@ -195,6 +199,17 @@
         
         .offer-left {
             margin-bottom: 40px;
+            
+        }
+        .offer-left h2{
+            font-family: Rancho;
+            font-size: 3.5rem;
+            font-weight: 600;
+        }
+        .offer-left p{
+            font-family:Comic Sans MS;
+            font-size: 1.3rem;
+            color: var(--gray-dark);
         }
         
         .offer-items {
@@ -223,13 +238,14 @@
         }
         
         .offer-item h5 {
-            font-size: 1.3rem;
-            font-weight: bold;
+            font-family: Rancho;
+            font-size: 1.5rem;
             color: var(--primary-color);
             margin-bottom: 10px;
         }
         
         .offer-item p {
+            font-family:Comic Sans MS;
             color: var(--gray-dark);
         }
         
@@ -244,45 +260,54 @@
         }
         
         .choose-left h1 {
+            font-family: Rancho;
             font-size: 2.5rem;
             margin-bottom: 20px;
         }
         
         .choose-left p {
-            font-size: 1.1rem;
+            font-size: 1.3rem;
             color: var(--gray-dark);
-            margin-bottom: 15px;
+            margin-bottom: 10px;
+            font-family:Comic Sans MS;
+        }
+        .offer-left .btn{
+            margin-top: 30%;
         }
         
         .choose-features {
             display: grid;
             grid-template-columns: 1fr;
             gap: 20px;
+            height: 90%;
+            width: 100%;
         }
-        
         .feature-item {
             background-color: var(--white-color);
             padding: 24px;
+            
             border-radius: 12px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             border-left: 4px solid var(--primary-color);
+            width: 100%;
         }
         
         .feature-content {
             display: flex;
             align-items: flex-start;
         }
-        
+        .feature-content h1{
+            font-family: Rancho;
+        }
+        .feature-item p{
+            font-family:Comic Sans MS;
+        }
         .feature-icon {
-            background-color: rgba(236, 89, 136, 0.1);
-            padding: 12px;
+            background-color: #EC5988;
             border-radius: 50%;
             margin-right: 15px;
-        }
-        
-        .feature-icon i {
-            color: var(--primary-color);
-            font-size: 1.3rem;
+            height: 20px;
+            width: 20px;
         }
         
         .feature-text {
@@ -309,6 +334,9 @@
             border-radius: 12px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             transition: all 0.3s ease;
+        }
+        .section-title{
+            font-family: Rancho;
         }
         
         .testimonial-card:hover {
@@ -349,6 +377,13 @@
             font-weight: bold;
             color: var(--primary-color);
             margin-bottom: 15px;
+            font-family: Rancho;
+        }
+
+        .info-group p {
+            font-size: 1rem;
+            color: var(--gray-dark);
+            font-family:Comic Sans MS;
         }
         
         .social-links a {
@@ -378,6 +413,7 @@
             font-weight: bold;
             color: var(--primary-color);
             margin-bottom: 30px;
+            font-family: Rancho;
         }
         
         .form-group {
@@ -389,6 +425,7 @@
             color: var(--gray-dark);
             margin-bottom: 8px;
             font-weight: 500;
+            font-family:Comic Sans MS;
         }
         
         .form-group input,
@@ -397,7 +434,7 @@
             padding: 12px 16px;
             border: 1px solid #ddd;
             border-radius: 8px;
-            font-family: 'Poppins', sans-serif;
+            font-family:Comic Sans MS;
             transition: all 0.3s ease;
         }
         
@@ -419,6 +456,7 @@
             color: var(--white-color);
             padding: 30px 0;
             text-align: center;
+            font-family:Comic Sans MS;
         }
         
         .footer-content {
@@ -441,6 +479,7 @@
         
         .footer-links a:hover {
             color: rgba(255, 255, 255, 0.8);
+            font-family:Comic Sans MS;
         }
         
         /* Responsive Styles */
@@ -449,9 +488,7 @@
                 display: block;
             }
             
-            nav {
-                gap: 25px;
-            }
+            
             
             #section-one {
                 padding-top: 150px;
@@ -534,5 +571,68 @@
             
             .item-image {
                 height: 200px;
+            }
+        }
+        @media (max-width: 350px) {
+            nav{
+                font-size: small;
+                gap: 0%;
+            }
+            .home{
+                display: none;
+            }
+            section{
+                padding: 35px 0px;
+            }
+            #section-one{
+                padding-top: 102px;
+            }
+            .hero-left{
+                margin-bottom: 72px;
+            }
+            .hero-image{
+                height: 190px;
+                margin-bottom: 0%;
+            }
+            .hero-text h3{
+                font-size: 2rem;
+                text-align: center;
+                line-height: 1.6;
+            }
+            .hero-text p{
+                font-size: 1rem;
+                margin-bottom: 2%;
+            }
+            #section-two{
+                padding-top: 0px;
+            }
+            .section-title{
+                margin-bottom: 16px;
+                text-align: center;
+            }
+            .offer-left p{
+                text-align: center;
+                font-size: 1rem;
+            }
+            .offer-left .btn{
+                margin-left: 22%;
+                margin-top: 20%;
+                place-self: center;
+            }
+            .item-image img{
+                height: 100%;
+            }
+            .choose-left p{
+                font-size: 1rem;
+                text-align: center;
+            }
+            .contact-info{
+                gap: 10px;
+            }
+            .contact-info .info-group{
+                text-align: center;
+            }
+            .info-group h3{
+                font-size: 2rem;
             }
         }

@@ -1,385 +1,361 @@
-   // Cart functionality
-   let cart = [];
-   let total = 0;
-   
-   // Update cart count display
-   function updateCartCount() {
-       const cartCount = document.getElementById('cart-count');
-       cartCount.textContent = cart.length;
-   }
-   
-   // Update cart display
-   function updateCartDisplay() {
-       const cartDisplay = document.getElementById('cart-display');
-       const cartTotal = document.getElementById('cart-total');
-       
-       if (cart.length === 0) {
-           cartDisplay.innerHTML = '<p class="text-gray-600">Your cart is empty.</p>';
-           cartTotal.textContent = 'R0.00';
-           return;
-       }
-       
-       let cartHTML = '<div class="space-y-2">';
-       cart.forEach((item, index) => {
-           cartHTML += `
-               <div class="flex justify-between items-center border-b pb-2">
-                   <div>
-                       <span class="font-medium">${item.name}</span>
-                       ${item.options ? `<span class="text-sm text-gray-600">${item.options}</span>` : ''}
-                       ${item.quantity > 1 ? `<span class="text-sm text-gray-600">x${item.quantity}</span>` : ''}
-                   </div>
-                   <div class="flex items-center">
-                       <span class="font-bold mr-4">R${item.price.toFixed(2)}</span>
-                       <button onclick="removeFromCart(${index})" class="text-red-500 hover:text-red-700">
-                           <i class="fas fa-times"></i>
-                       </button>
-                   </div>
-               </div>
-           `;
-       });
-       cartHTML += '</div>';
-       
-       cartDisplay.innerHTML = cartHTML;
-       cartTotal.textContent = `R${total.toFixed(2)}`;
-   }
-   
-   // Add item to cart
-   function addToCart(name, price, options = '', quantity = 1) {
-       cart.push({
-           name,
-           price: price * quantity,
-           options,
-           quantity
-       });
-       
-       total += price * quantity;
-       updateCartCount();
-       updateCartDisplay();
-   }
-   
-   // Remove item from cart
-   function removeFromCart(index) {
-       total -= cart[index].price;
-       cart.splice(index, 1);
-       updateCartCount();
-       updateCartDisplay();
-   }
-   
-   // Add selected items to cart based on section
-   function addSelectedToCart(section) {
-       switch(section) {
-           case 'queens':
-               const queensCheckbox = document.querySelector('.checkbox-queens:checked');
-               if (!queensCheckbox) {
-                   alert('Please select a Queens option');
-                   return;
-               }
-               const queensQuantity = document.querySelector('#queens .quantity-input').value;
-               addToCart(
-                   'Queens Mini Cakes',
-                   parseFloat(queensCheckbox.dataset.price),
-                   queensCheckbox.value,
-                   parseInt(queensQuantity)
-               );
-               break;
-               
-           case 'scones':
-               const sconesCheckbox = document.querySelector('.checkbox-scones:checked');
-               if (!sconesCheckbox) {
-                   alert('Please select a Scones option');
-                   return;
-               }
-               const sconesQuantity = document.querySelector('#scones .quantity-input').value;
-               addToCart(
-                   'Scones',
-                   parseFloat(sconesCheckbox.dataset.price),
-                   sconesCheckbox.value,
-                   parseInt(sconesQuantity)
-               );
-               break;
-               
-           case 'biscuits':
-               const biscuitsCheckbox = document.querySelector('.checkbox-biscuits:checked');
-               if (!biscuitsCheckbox) {
-                   alert('Please select a Biscuits option');
-                   return;
-               }
-               const biscuitsQuantity = document.querySelector('#biscuits .quantity-input').value;
-               addToCart(
-                   'Biscuits',
-                   parseFloat(biscuitsCheckbox.dataset.price),
-                   biscuitsCheckbox.value,
-                   parseInt(biscuitsQuantity)
-               );
-               break;
-               
-               case 'mixedgoodies':
-                const mixedCheckbox = document.querySelector('.checkbox-mixedgoodies:checked');
-                if (!mixedCheckbox) {
-                    alert('Please select a Mixed Goodies option');
-                    return;
-                }
-                addToCart(
-                    'Mixed Goodies',
-                    parseFloat(mixedCheckbox.dataset.price),
-                    mixedCheckbox.value
-                );
-                break;
-               
-           case '1tire-cake':
-               const oneTireCheckbox = document.getElementById('1tire-cake');
-               if (!oneTireCheckbox.checked) {
-                   alert('Please select the 1 Tire Cake option');
-                   return;
-               }
-               const occasion1 = document.getElementById('occasion1').value;
-               const size1 = document.getElementById('size1');
-               const flavour1 = document.getElementById('flavour1').value;
-               
-               if (!occasion1 || !size1.value || !flavour1) {
-                   alert('Please fill all required fields for 1 Tire Cake');
-                   return;
-               }
-               
-               const options1 = `${occasion1}, ${size1.options[size1.selectedIndex].text}, ${flavour1}`;
-               addToCart(
-                   '1 Tire Cake',
-                   parseFloat(size1.options[size1.selectedIndex].dataset.price),
-                   options1
-               );
-               break;
-               
-           case '2tire-cake':
-               const twoTireCheckbox = document.getElementById('2tire-cake');
-               if (!twoTireCheckbox.checked) {
-                   alert('Please select the 2 Tire Cake option');
-                   return;
-               }
-               const occasion2 = document.getElementById('occasion2').value;
-               const size2 = document.getElementById('size2');
-               const topFlavour2 = document.getElementById('top-flavour2').value;
-               const bottomFlavour2 = document.getElementById('bottom-flavour2').value;
-               
-               if (!occasion2 || !size2.value || !topFlavour2 || !bottomFlavour2) {
-                   alert('Please fill all required fields for 2 Tire Cake');
-                   return;
-               }
-               
-               const options2 = `${occasion2}, ${size2.options[size2.selectedIndex].text}, Top: ${topFlavour2}, Bottom: ${bottomFlavour2}`;
-               addToCart(
-                   '2 Tire Cake',
-                   parseFloat(size2.options[size2.selectedIndex].dataset.price),
-                   options2
-               );
-               break;
-               
-           case 'banto3':
-               const bantoCheckbox = document.getElementById('banto3');
-               if (!bantoCheckbox.checked) {
-                   alert('Please select the Banto Cake option');
-                   return;
-               }
-               const occasion3 = document.getElementById('occasion3').value;
-               const size3 = document.getElementById('size3');
-               const flavour3 = document.getElementById('flavour3').value;
-               
-               if (!occasion3 || !size3.value || !flavour3) {
-                   alert('Please fill all required fields for Banto Cake');
-                   return;
-               }
-               
-               const options3 = `${occasion3}, ${size3.options[size3.selectedIndex].text}, ${flavour3}`;
-               addToCart(
-                   'Banto Cake',
-                   parseFloat(size3.options[size3.selectedIndex].dataset.price),
-                   options3
-               );
-               break;
-               
-           case 'cup-cakes':
-               const cupCakesCheckbox = document.getElementById('cup-cakes');
-               if (!cupCakesCheckbox.checked) {
-                   alert('Please select the Cup Cakes option');
-                   return;
-               }
-               const occasion4 = document.getElementById('occasion4').value;
-               const quantity = document.querySelector('#cupcakes input[type="number"]').value;
-               const flavour4 = document.getElementById('flavour4').value;
-               const model = document.getElementById('model');
-               
-               if (!occasion4 || !quantity || quantity < 12 || !flavour4 || !model.value) {
-                   alert('Please fill all required fields for Cup Cakes (minimum 12)');
-                   return;
-               }
-               
-               const options4 = `${occasion4}, ${quantity} cakes, ${flavour4}, ${model.options[model.selectedIndex].text}`;
-               addToCart(
-                   'Cup Cakes',
-                   parseFloat(model.options[model.selectedIndex].dataset.price) * parseInt(quantity),
-                   options4,
-                   parseInt(quantity)
-               );
-               break;
-               
-           case 'topping':
-               // Handle toppings
-               const toppings = [];
-               let toppingTotal = 0;
-               
-               // Letters
-               const lettersCheckbox = document.getElementById('letters');
-               if (lettersCheckbox.checked) {
-                   const lettersQuantity = parseInt(document.getElementById('quantity-letters').value);
-                   const lettersPrice = parseFloat(lettersCheckbox.dataset.price) * lettersQuantity;
-                   toppings.push(`Letters x${lettersQuantity}`);
-                   toppingTotal += lettersPrice;
-               }
-               
-               // Polystyren Balls
-               const polystyrenCheckbox = document.getElementById('polystyren');
-               if (polystyrenCheckbox.checked) {
-                   const polystyrenQuantity = parseInt(document.getElementById('quantity-polystyren').value);
-                   const polystyrenPrice = parseFloat(polystyrenCheckbox.dataset.price) * polystyrenQuantity;
-                   toppings.push(`Polystyren Balls x${polystyrenQuantity}`);
-                   toppingTotal += polystyrenPrice;
-               }
-               
-               // Flower Stem
-               const flowerCheckbox = document.getElementById('flower');
-               if (flowerCheckbox.checked) {
-                   const flowerQuantity = parseInt(document.getElementById('quantity-flower').value);
-                   const flowerPrice = parseFloat(flowerCheckbox.dataset.price) * flowerQuantity;
-                   toppings.push(`Flower Stem x${flowerQuantity}`);
-                   toppingTotal += flowerPrice;
-               }
-               
-               // Cake Print
-               const cakePrintCheckbox = document.getElementById('cakeprint');
-               if (cakePrintCheckbox.checked) {
-                   const cakePrintPrice = parseFloat(cakePrintCheckbox.dataset.price);
-                   toppings.push('Cake Print');
-                   toppingTotal += cakePrintPrice;
-               }
-               
-               // Cup Cake Print
-               const cupPrintCheckbox = document.getElementById('cup-print');
-               if (cupPrintCheckbox.checked) {
-                   const cupPrintPrice = parseFloat(cupPrintCheckbox.dataset.price);
-                   toppings.push('Cup Cake Print');
-                   toppingTotal += cupPrintPrice;
-               }
-               
-               // Custom Topping
-               const customToppingCheckbox = document.getElementById('customtopping');
-               if (customToppingCheckbox.checked) {
-                   const customToppingPrice = parseFloat(customToppingCheckbox.dataset.price);
-                   toppings.push('Custom Topping');
-                   toppingTotal += customToppingPrice;
-               }
-               
-               if (toppings.length === 0) {
-                   alert('Please select at least one topping');
-                   return;
-               }
-               
-               addToCart(
-                   'Cake Toppings',
-                   toppingTotal,
-                   toppings.join(', ')
-               );
-               break;
-               
-           default:
-               alert('Invalid section');
-       }
-   }
-   
-   // Send quotation via WhatsApp
-   function sendWhatsApp() {
-       if (cart.length === 0) {
-           alert('Your cart is empty. Please add items before sending.');
-           return;
-       }
-       
-       const name = document.getElementById('name').value;
-       const phone = document.getElementById('phone').value;
-       const email = document.getElementById('email').value;
-       const deliveryDate = document.getElementById('delivery-date').value;
-       const description = document.getElementById('description').value;
-       
-       if (!name || !phone || !email || !deliveryDate) {
-           alert('Please fill all required customer information fields');
-           return;
-       }
-       
-       // Format cart items for WhatsApp message
-       let message = `*New Cake Order Request*\n\n`;
-       message += `*Customer Details:*\n`;
-       message += `Name: ${name}\n`;
-       message += `Phone: ${phone}\n`;
-       message += `Email: ${email}\n`;
-       message += `Delivery/Pickup Date: ${deliveryDate}\n\n`;
-       
-       if (description) {
-           message += `*Special Instructions:*\n${description}\n\n`;
-       }
-       
-       message += `*Order Summary:*\n`;
-       cart.forEach(item => {
-           message += `- ${item.name}`;
-           if (item.options) message += ` (${item.options})`;
-           if (item.quantity > 1) message += ` x${item.quantity}`;
-           message += ` - R${item.price.toFixed(2)}\n`;
-       });
-       
-       message += `\n*Total: R${total.toFixed(2)}*`;
-       
-       // Encode message for WhatsApp URL
-       const whatsappNumber= '27734063449';
-       const encodedMessage = encodeURIComponent(message);
-       const whatsappUrl = `https://wa.me/?text=${encodedMessage}`;
-       
-       // Open WhatsApp in new tab
-       window.open(whatsappUrl, '_blank');
-   }
-   
-   // Send quotation via Email (simulated)
-   function sendEmail() {
-       if (cart.length === 0) {
-           alert('Your cart is empty. Please add items before sending.');
-           return;
-       }
-       
-       const name = document.getElementById('name').value;
-       const phone = document.getElementById('phone').value;
-       const email = document.getElementById('email').value;
-       const deliveryDate = document.getElementById('delivery-date').value;
-       const description = document.getElementById('description').value;
-       
-       if (!name || !phone || !email || !deliveryDate) {
-           alert('Please fill all required customer information fields');
-           return;
-       }
-       
-       // In a real implementation, this would send an actual email
-       alert('Email functionality would send the order details to the bakery. In a real implementation, this would connect to an email service or backend.');
-       
-       // For demo purposes, we'll just show a confirmation
-       console.log('Order details would be sent via email to the bakery');
-   }
-   
-   // File upload display
-   document.getElementById('file-upload').addEventListener('change', function(e) {
-       const fileName = e.target.files[0] ? e.target.files[0].name : 'No file selected';
-       document.getElementById('file-name').textContent = fileName;
-   });
-   
-   // Initialize the page
-   document.addEventListener('DOMContentLoaded', function() {
-       updateCartCount();
-       updateCartDisplay();
-       
-       // Set minimum date for delivery date picker to today
-       const today = new Date().toISOString().split('T')[0];
-       document.getElementById('delivery-date').min = today;
-   });
+  // Cart functionality
+        let cart = [];
+        let cartCount = 0;
+        let cartTotal = 0;
+
+        // File upload functionality
+        document.getElementById('file-upload').addEventListener('change', function(e) {
+            const fileName = e.target.files[0] ? e.target.files[0].name : 'No file selected';
+            document.getElementById('file-name').textContent = fileName;
+        });
+
+        // Add to cart functions
+        function addSelectedToCart(type) {
+            let selectedItem = null;
+            let quantity = 1;
+            let price = 0;
+            let description = '';
+
+            switch(type) {
+                case 'queens':
+                case 'scones':
+                case 'biscuits':
+                    // Get the selected checkbox
+                    const checkboxes = document.querySelectorAll(`.checkbox-${type}`);
+                    for (let checkbox of checkboxes) {
+                        if (checkbox.checked) {
+                            selectedItem = checkbox;
+                            break;
+                        }
+                    }
+
+                    if (!selectedItem) {
+                        alert('Please select an option');
+                        return;
+                    }
+
+                    // Get quantity
+                    quantity = parseInt(document.getElementById(`${type}-quantity`).value);
+                    price = parseFloat(selectedItem.dataset.price) * quantity;
+                    description = `${selectedItem.value} x ${quantity}`;
+                    break;
+
+                case 'mixedgoodies':
+                    // Get the selected checkbox
+                    const mixedCheckboxes = document.querySelectorAll('.checkbox-mixedgoodies');
+                    for (let checkbox of mixedCheckboxes) {
+                        if (checkbox.checked) {
+                            selectedItem = checkbox;
+                            break;
+                        }
+                    }
+
+                    if (!selectedItem) {
+                        alert('Please select an option');
+                        return;
+                    }
+
+                    price = parseFloat(selectedItem.dataset.price);
+                    description = selectedItem.value;
+                    break;
+
+                case '1tire-cake':
+                    if (!document.getElementById('1tire-cake').checked) {
+                        alert('Please select this cake option');
+                        return;
+                    }
+
+                    const occasion1 = document.getElementById('occasion1').value;
+                    const size1 = document.getElementById('size1').value;
+                    const flavour1 = document.getElementById('flavour1').value;
+
+                    if (!occasion1 || !size1 || !flavour1) {
+                        alert('Please fill all cake details');
+                        return;
+                    }
+
+                    const sizeOption1 = document.getElementById('size1').options[document.getElementById('size1').selectedIndex];
+                    price = parseFloat(sizeOption1.dataset.price);
+                    description = `1 Tire Cake - ${occasion1}, ${size1}, ${flavour1}`;
+                    break;
+
+                case '2tire-cake':
+                    if (!document.getElementById('2tire-cake').checked) {
+                        alert('Please select this cake option');
+                        return;
+                    }
+
+                    const occasion2 = document.getElementById('occasion2').value;
+                    const size2 = document.getElementById('size2').value;
+                    const topFlavour2 = document.getElementById('top-flavour2').value;
+                    const bottomFlavour2 = document.getElementById('bottom-flavour2').value;
+
+                    if (!occasion2 || !size2 || !topFlavour2 || !bottomFlavour2) {
+                        alert('Please fill all cake details');
+                        return;
+                    }
+
+                    const sizeOption2 = document.getElementById('size2').options[document.getElementById('size2').selectedIndex];
+                    price = parseFloat(sizeOption2.dataset.price);
+                    description = `2 Tire Cake - ${occasion2}, ${size2}, Top: ${topFlavour2}, Bottom: ${bottomFlavour2}`;
+                    break;
+
+                case 'banto3':
+                    if (!document.getElementById('banto3').checked) {
+                        alert('Please select this cake option');
+                        return;
+                    }
+
+                    const occasion3 = document.getElementById('occasion3').value;
+                    const size3 = document.getElementById('size3').value;
+                    const flavour3 = document.getElementById('flavour3').value;
+
+                    if (!occasion3 || !size3 || !flavour3) {
+                        alert('Please fill all cake details');
+                        return;
+                    }
+
+                    const sizeOption3 = document.getElementById('size3').options[document.getElementById('size3').selectedIndex];
+                    price = parseFloat(sizeOption3.dataset.price);
+                    description = `Banto Cake - ${occasion3}, ${size3}, ${flavour3}`;
+                    break;
+
+                case 'cup-cakes':
+                    if (!document.getElementById('cup-cakes').checked) {
+                        alert('Please select this cake option');
+                        return;
+                    }
+
+                    const occasion4 = document.getElementById('occasion4').value;
+                    const cupcakeQuantity = document.getElementById('cupcake-quantity').value;
+                    const flavour4 = document.getElementById('flavour4').value;
+                    const model = document.getElementById('model').value;
+
+                    if (!occasion4 || !cupcakeQuantity || !flavour4 || !model) {
+                        alert('Please fill all cake details');
+                        return;
+                    }
+
+                    if (parseInt(cupcakeQuantity) < 12) {
+                        alert('Minimum of 12 cupcakes required');
+                        return;
+                    }
+
+                    const modelOption = document.getElementById('model').options[document.getElementById('model').selectedIndex];
+                    price = parseFloat(modelOption.dataset.price) * parseInt(cupcakeQuantity);
+                    description = `Muffin Cake - ${occasion4}, ${cupcakeQuantity} cupcakes, ${flavour4}, ${model}`;
+                    break;
+
+                case 'topping':
+                    // Handle toppings
+                    const toppings = [];
+                    let toppingPrice = 0;
+
+                    // Letters
+                    if (document.getElementById('letters').checked) {
+                        const qty = parseInt(document.getElementById('quantity-letters').value) || 1;
+                        toppingPrice += 5 * qty;
+                        toppings.push(`Letters x${qty}`);
+                    }
+
+                    // Polystyren Balls
+                    if (document.getElementById('polystyren').checked) {
+                        const qty = parseInt(document.getElementById('quantity-polystyren').value) || 1;
+                        toppingPrice += 5 * qty;
+                        toppings.push(`Polystyren Balls x${qty}`);
+                    }
+
+                    // Flower Stem
+                    if (document.getElementById('flower').checked) {
+                        const qty = parseInt(document.getElementById('quantity-flower').value) || 1;
+                        toppingPrice += 5 * qty;
+                        toppings.push(`Flower Stem x${qty}`);
+                    }
+
+                    // Cake Print
+                    if (document.getElementById('cakeprint').checked) {
+                        toppingPrice += 150;
+                        toppings.push('Cake Print');
+                    }
+
+                    // Cup Cake Print
+                    if (document.getElementById('cup-print').checked) {
+                        toppingPrice += 250;
+                        toppings.push('Cup Cake Print');
+                    }
+
+                    // Custom Topping
+                    if (document.getElementById('customtopping').checked) {
+                        toppingPrice += 250;
+                        toppings.push('Custom Topping');
+                    }
+
+                    if (toppings.length === 0) {
+                        alert('Please select at least one topping');
+                        return;
+                    }
+
+                    price = toppingPrice;
+                    description = `Toppings: ${toppings.join(', ')}`;
+                    break;
+            }
+
+            // Add to cart
+            cart.push({
+                description: description,
+                price: price
+            });
+
+            cartCount++;
+            cartTotal += price;
+
+            // Update UI
+            updateCartUI();
+
+            // Show success message
+            alert('Item added to cart!');
+        }
+
+        // Function to remove item from cart
+        function removeFromCart(index) {
+            // Subtract the price of the removed item from the total
+            cartTotal -= cart[index].price;
+            
+            // Remove the item from the cart array
+            cart.splice(index, 1);
+            
+            // Decrement the cart count
+            cartCount--;
+            
+            // Update the UI
+            updateCartUI();
+        }
+
+        function updateCartUI() {
+            // Update cart count
+            document.getElementById('cart-count').textContent = cartCount;
+
+            // Update cart display
+            const cartDisplay = document.getElementById('cart-display');
+
+            if (cart.length === 0) {
+                cartDisplay.innerHTML = '<p class="text-gray-500">Your cart is empty.</p>';
+            } else {
+                let html = '';
+                cart.forEach((item, index) => {
+                    html += `
+                        <div class="flex justify-between items-center py-3 border-b border-gray-200">
+                            <div class="flex-1">
+                                <div class="item-description">${item.description}</div>
+                                <div class="item-price font-medium text-pink-600">R${item.price.toFixed(2)}</div>
+                            </div>
+                            <button onclick="removeFromCart(${index})" class="ml-4 text-red-500 hover:text-red-700">
+                                <i class="fas fa-times"></i>
+                            </button>
+                        </div>
+                    `;
+                });
+                cartDisplay.innerHTML = html;
+            }
+
+            // Update total
+            document.getElementById('cart-total').textContent = `R${cartTotal.toFixed(2)}`;
+        }
+
+        function sendWhatsApp() {
+            if (cart.length === 0) {
+                alert('Your cart is empty. Please add items before sending.');
+                return;
+            }
+
+            const name = document.getElementById('name').value;
+            const phone = document.getElementById('phone').value;
+            const email = document.getElementById('email').value;
+            const date = document.getElementById('delivery-date').value;
+            const description = document.getElementById('description').value;
+
+            if (!name || !phone || !email || !date) {
+                alert('Please fill in all required customer details.');
+                return;
+            }
+
+            // Format cart items for message
+            let cartItems = '';
+            cart.forEach(item => {
+                cartItems += `- ${item.description}: R${item.price.toFixed(2)}\n`;
+            });
+
+            const message = `Hello Tweens Bakery!\n\nI would like to place an order:\n\nCustomer Details:\nName: ${name}\nPhone: ${phone}\nEmail: ${email}\nDelivery/Pickup Date: ${date}\n\nOrder Details:\n${cartItems}\nTotal: R${cartTotal.toFixed(2)}\n\nSpecial Instructions:\n${description || 'None'}`;
+
+            // Encode message for URL
+            const encodedMessage = encodeURIComponent(message);
+
+            // Create WhatsApp link
+            const whatsappLink = `https://wa.me/?text=${encodedMessage}`;
+
+            // Open in new tab
+            window.open(whatsappLink, '_blank');
+        }
+
+        function sendEmail() {
+            if (cart.length === 0) {
+                alert('Your cart is empty. Please add items before sending.');
+                return;
+            }
+
+            const name = document.getElementById('name').value;
+            const phone = document.getElementById('phone').value;
+            const email = document.getElementById('email').value;
+            const date = document.getElementById('delivery-date').value;
+            const description = document.getElementById('description').value;
+
+            if (!name || !phone || !email || !date) {
+                alert('Please fill in all required customer details.');
+                return;
+            }
+
+            // Format cart items for email body
+            let cartItems = '';
+            cart.forEach(item => {
+                cartItems += `<tr><td>${item.description}</td><td>R${item.price.toFixed(2)}</td></tr>`;
+            });
+
+            const subject = `New Order from ${name}`;
+            const body = `
+                <h2>New Order Details</h2>
+                <h3>Customer Information:</h3>
+                <p><strong>Name:</strong> ${name}</p>
+                <p><strong>Phone:</strong> ${phone}</p>
+                <p><strong>Email:</strong> ${email}</p>
+                <p><strong>Delivery/Pickup Date:</strong> ${date}</p>
+
+                <h3>Order Summary:</h3>
+                <table border="1" cellpadding="5" cellspacing="0">
+                    <thead>
+                        <tr>
+                            <th>Item</th>
+                            <th>Price</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        ${cartItems}
+                        <tr>
+                            <td><strong>Total</strong></td>
+                            <td><strong>R${cartTotal.toFixed(2)}</strong></td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3>Special Instructions:</h3>
+                <p>${description || 'None'}</p>
+            `;
+
+            // Create mailto link
+            const mailtoLink = `mailto:?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
+            // Open email client
+            window.location.href = mailtoLink;
+        }
+
+        // Initialize the cart UI
+        updateCartUI();
