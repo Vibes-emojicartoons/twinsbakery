@@ -3,202 +3,198 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sweet Delights</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
+    <link rel="stylesheet" href="qoutation.css">
 
+    <title>Document</title>
 </head>
-<body class="font-sans bg-gray-50">
-    <header class="bg-white shadow-md sticky top-0 z-50">
-        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
-            <div class="logo flex items-center">
-                <a href="index.html" class="flex items-center">
-                    <div class="w-12 h-12 rounded-full text-white flex items-center justify-center font-bold text-xl">
-                        <img src="icons/logo_icon.png">
+<body>
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <a href="index.html">
+                    <div class="logo-icon">
+                        <img src="icons/logo_icon.png" alt="Sweet Delights Logo">
                     </div>
                 </a>
             </div>
             <nav>
-                <a href="index.html" class="relative text-pink-600 text-2xl">
+                <a href="index.html" class="cart-icon">
                     <i class="fas fa-shopping-cart"></i>
-                    <span id="cart-count" class="absolute -top-2 -right-2 bg-pink-600 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">0</span>
+                    <span id="cart-count" class="cart-count">0</span>
                 </a>
             </nav>
         </div>
     </header>
 
     <main>
-        <section id="info" class="py-12">
-            <div class="container mx-auto px-4">
-                <div class="text-center mb-8">
-            <h1 class="text-5xl font-bold text-pink-600 mb-2 font-[Rancho]">Our Menu</h1>
-            <p class="text-gray-600 max-w-2xl mx-auto font-comic-sans"><span style="font-family:Comic Sans MS;">
-                Our menu consist of <span class="text-pink-500">mini cakes</span>, <span class="text-pink-500">celebration cakes</span> along with <span class="text-pink-500">toppings</span> to choose from, and a mixture of our <span class="text-pink-500">mixed goodies</span>.
-            </p>
+        <section id="info">
+            <div class="container">
+                <div class="section-title">
+                    <h1>Our Menu</h1>
+                    <p>
+                        Our menu consist of <span style="color:#ec4899;">mini cakes</span>, <span style="color:#ec4899;">celebration cakes</span> along with <span style="color:#ec4899;">toppings</span> to choose from, and a mixture of our <span style="color:#ec4899;">mixed goodies</span>.
+                    </p>
+                </div>
             </div>
-            </div>
+        </section>
 
-        </section>
         <!-- Mini Cakes Section -->
-        <section id="minicake" class="py-12">
-            <div class="container mx-auto px-4">
-                <div class="text-center mb-8">
-                    <h1 class="text-5xl font-bold text-pink-600 mb-2 font-[Rancho]">Mini Cakes</h1>
-                    <p class="text-gray-600 max-w-2xl mx-auto font-comic-sans"><span style="font-family:Comic Sans MS;">Individually sized desserts that offer all the flavor and charm of a full-sized cake in a perfectly portioned treat.</span></p>
+        <section id="minicake">
+            <div class="container">
+                <div class="section-title">
+                    <h1>Mini Cakes</h1>
+                    <p>Individually sized desserts that offer all the flavor and charm of a full-sized cake in a perfectly portioned treat.</p>
                 </div>
-                
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+                <div class="product-grid">
                     <!-- Queens -->
-                    <div class="bg-white rounded-lg shadow-md overflow-hidden transition-transform hover:-translate-y-1">
-                        <div class="p-6">
-                            <div class="text-center mb-6">
-                                <h3 class="text-3xl font-bold text-pink-600 mb-4"><span style="font-family:Rancho;">Queens</span></h3>
-                                <div class="w-full h-48 rounded flex items-center justify-center">
-                                    <img src="pictures/queens.jpg" style="height: 100%;">
+                    <div class="product-card">
+                        <div class="product-content">
+                            <div class="product-header">
+                                <h3>Queens</h3>
+                                <div class="product-image">
+                                    <img src="pictures/queens.jpg" alt="Queens Mini Cakes">
                                 </div>
                             </div>
-                            
-                            <div class="space-y-3">
+
+                            <div>
                                 <div class="checkbox-option">
-                                    <input type="checkbox" id="queens-5l" class="w-5 h-5 mr-2 accent-pink-600" value="Queens 5 Liters/ 25 Cakes" data-price="150.00">
-                                    <label for="queens-5l" class="checkbox-label block px-4 py-3 border border-gray-300 rounded cursor-pointer hover:bg-pink-50">
-                                        <span style="font-family:Rancho;">5 Liters/ 25 cakes </span><span class="float-right font-bold text-pink-600"><span style="font-family:Comic Sans MS;">R150.00</span></span>
+                                    <input type="checkbox" id="queens-5l" value="Queens 5 Liters/ 25 Cakes" data-price="150.00">
+                                    <label for="queens-5l" class="checkbox-label">
+                                        <span>5 Liters/ 25 cakes</span><span class="price">R150.00</span>
                                     </label>
                                 </div>
-                                
+
                                 <div class="checkbox-option">
-                                    <input type="checkbox" id="queens-7l" class="w-5 h-5 mr-2 accent-pink-600" value="Queens 7 Liters/ 40 Cakes" data-price="240.00">
-                                    <label for="queens-7l" class="checkbox-label block px-4 py-3 border border-gray-300 rounded cursor-pointer hover:bg-pink-50">
-                                        <span style="font-family:Rancho;">7 Liters/ 40 cakes</span> <span class="float-right font-bold text-pink-600"><span style="font-family:Comic Sans MS;">R240.00</span></span>
+                                    <input type="checkbox" id="queens-7l" value="Queens 7 Liters/ 40 Cakes" data-price="240.00">
+                                    <label for="queens-7l" class="checkbox-label">
+                                        <span>7 Liters/ 40 cakes</span><span class="price">R240.00</span>
                                     </label>
                                 </div>
-                                
+
                                 <div class="checkbox-option">
-                                    <input type="checkbox" id="queens-10l" class="w-5 h-5 mr-2 accent-pink-600" value="Queens 10 Liters/ 50 Cakes" data-price="300.00">
-                                    <label for="queens-10l" class="checkbox-label block px-4 py-3 border border-gray-300 rounded cursor-pointer hover:bg-pink-50">
-                                        <span style="font-family:Rancho;">10 Liters/ 50 cakes</span> <span class="float-right font-bold text-pink-600"><span style="font-family:Comic Sans MS;">R300.00</span></span>
+                                    <input type="checkbox" id="queens-10l" value="Queens 10 Liters/ 50 Cakes" data-price="300.00">
+                                    <label for="queens-10l" class="checkbox-label">
+                                        <span>10 Liters/ 50 cakes</span><span class="price">R300.00</span>
                                     </label>
                                 </div>
-                                
+
                                 <div class="checkbox-option">
-                                    <input type="checkbox" id="queens-20l" class="w-5 h-5 mr-2 accent-pink-600" value="Queens 20 Liters/ 100 Cakes" data-price="600.00">
-                                    <label for="queens-20l" class="checkbox-label block px-4 py-3 border border-gray-300 rounded cursor-pointer hover:bg-pink-50">
-                                        <span style="font-family:Rancho;">20 Liters/ 100 cakes</span> <span class="float-right font-bold text-pink-600"><span style="font-family:Comic Sans MS;">R600.00</span></span>
+                                    <input type="checkbox" id="queens-20l" value="Queens 20 Liters/ 100 Cakes" data-price="600.00">
+                                    <label for="queens-20l" class="checkbox-label">
+                                        <span>20 Liters/ 100 cakes</span><span class="price">R600.00</span>
                                     </label>
                                 </div>
-                                
-                                <div class="mt-4">
-                                    <label for="queens-quantity" class="block mb-1"><span style="font-family:Rancho;">Quantity</span></label>
-                                    <input type="number" id="queens-quantity" class="w-full px-3 py-2 border border-gray-300 rounded" min="1" value="1">
+
+                                <div class="quantity-input">
+                                    <label for="queens-quantity">Quantity</label>
+                                    <input type="number" id="queens-quantity" min="1" value="1">
                                 </div>
-                                
-                                <button onclick="addSelectedToCart('queens')" class="w-full mt-4 bg-pink-600 text-white py-3 rounded font-bold hover:bg-pink-700 transition">
-                                    <span style="font-family:Comic Sans MS;">Add to Cart</span>
+
+                                <button onclick="addSelectedToCart('queens')" class="btn">
+                                    <span>Add to Cart</span>
                                 </button>
                             </div>
                         </div>
                     </div>
-                    
+
                     <!-- Scones -->
-                    <div class="bg-white rounded-lg shadow-md overflow-hidden transition-transform hover:-translate-y-1">
-                        <div class="p-6">
-                            <div class="text-center mb-6">
-                                <h3 class="text-3xl font-bold text-pink-600 mb-4"><span style="font-family:Rancho;">Scones</span></h3>
-                                <div class="w-full h-48 rounded flex items-center justify-center">
-                                    <img src="pictures/scones.jpg" style="height: 100%;">
+                    <div class="product-card">
+                        <div class="product-content">
+                            <div class="product-header">
+                                <h3>Scones</h3>
+                                <div class="product-image">
+                                    <img src="pictures/scones.jpg" alt="Scones Mini Cakes">
                                 </div>
                             </div>
-                            
-                            <div class="space-y-3">
+
+                            <div>
                                 <div class="checkbox-option">
-                                    <input type="checkbox" id="scones-5l" class="w-5 h-5 mr-2 accent-pink-600" value="Scones 5 Liters/ 35 Cakes" data-price="150.00">
-                                    <label for="scones-5l" class="checkbox-label block px-4 py-3 border border-gray-300 rounded cursor-pointer hover:bg-pink-50">
-                                        <span style="font-family:Rancho;">5 Liters/ 25 cakes</span><span class="float-right font-bold text-pink-600"><span style="font-family:Comic Sans MS;">R150.00</span></span>
+                                    <input type="checkbox" id="scones-5l" value="Scones 5 Liters/ 35 Cakes" data-price="150.00">
+                                    <label for="scones-5l" class="checkbox-label">
+                                        <span>5 Liters/ 25 cakes</span><span class="price">R150.00</span>
                                     </label>
                                 </div>
-                                
+
                                 <div class="checkbox-option">
-                                    <input type="checkbox" id="scones-7l" class="w-5 h-5 mr-2 accent-pink-600" value="Scones 7 Liters/ 48 Cakes" data-price="240.00">
-                                    <label for="scones-7l" class="checkbox-label block px-4 py-3 border border-gray-300 rounded cursor-pointer hover:bg-pink-50">
-                                       <span style="font-family:Rancho;">7 Liters/ 40 cakes</span><span class="float-right font-bold text-pink-600"><span style="font-family:Comic Sans MS;">R240.00</span></span>
+                                    <input type="checkbox" id="scones-7l" value="Scones 7 Liters/ 48 Cakes" data-price="240.00">
+                                    <label for="scones-7l" class="checkbox-label">
+                                        <span>7 Liters/ 40 cakes</span><span class="price">R240.00</span>
                                     </label>
                                 </div>
-                                
+
                                 <div class="checkbox-option">
-                                    <input type="checkbox" id="scones-10l" class="w-5 h-5 mr-2 accent-pink-600" value="Scones 10 Liters/ 70 Cakes" data-price="300.00">
-                                    <label for="scones-10l" class="checkbox-label block px-4 py-3 border border-gray-300 rounded cursor-pointer hover:bg-pink-50">
-                                        <span style="font-family:Rancho;">10 Liters/ 50 cakes</span><span class="float-right font-bold text-pink-600"><span style="font-family:Comic Sans MS;">R300.00</span></span>
+                                    <input type="checkbox" id="scones-10l" value="Scones 10 Liters/ 70 Cakes" data-price="300.00">
+                                    <label for="scones-10l" class="checkbox-label">
+                                        <span>10 Liters/ 50 cakes</span><span class="price">R300.00</span>
                                     </label>
                                 </div>
-                                
+
                                 <div class="checkbox-option">
-                                    <input type="checkbox" id="scones-20l" class="w-5 h-5 mr-2 accent-pink-600" value="Scones 20 Liters/ 140 Cakes" data-price="600.00">
-                                    <label for="scones-20l" class="checkbox-label block px-4 py-3 border border-gray-300 rounded cursor-pointer hover:bg-pink-50">
-                                        <span style="font-family:Rancho;">20 Liters/ 100 cakes</span><span class="float-right font-bold text-pink-600"><span style="font-family:Comic Sans MS;">R600.00</span></span>
-                                    </span></span>
+                                    <input type="checkbox" id="scones-20l" value="Scones 20 Liters/ 140 Cakes" data-price="600.00">
+                                    <label for="scones-20l" class="checkbox-label">
+                                        <span>20 Liters/ 100 cakes</span><span class="price">R600.00</span>
                                     </label>
                                 </div>
-                                
-                                <div class="mt-4">
-                                    <label for="scones-quantity" class="block mb-1"><span style="font-family:Rancho;">Quantity</span></label>
-                                    <input type="number" id="scones-quantity" class="w-full px-3 py-2 border border-gray-300 rounded" min="1" value="1">
+
+                                <div class="quantity-input">
+                                    <label for="scones-quantity">Quantity</label>
+                                    <input type="number" id="scones-quantity" min="1" value="1">
                                 </div>
-                                
-                                <button onclick="addSelectedToCart('scones')" class="w-full mt-4 bg-pink-600 text-white py-3 rounded font-bold hover:bg-pink-700 transition">
-                                    <span style="font-family:Comic Sans MS;">Add to Cart</span>
+
+                                <button onclick="addSelectedToCart('scones')" class="btn">
+                                    <span>Add to Cart</span>
                                 </button>
                             </div>
                         </div>
                     </div>
-                    
+
                     <!-- Biscuits -->
-                    <div class="bg-white rounded-lg shadow-md overflow-hidden transition-transform hover:-translate-y-1">
-                        <div class="p-6">
-                            <div class="text-center mb-6">
-                                <h3 class="text-3xl font-bold text-pink-600 mb-4"><span style="font-family:Rancho;">Biscuits</span></h3>
-                                <div class="w-full h-48 rounded flex items-center justify-center">
-                                    <img src="pictures/biscuits1.jpg" style="height: 100%;">
+                    <div class="product-card">
+                        <div class="product-content">
+                            <div class="product-header">
+                                <h3>Biscuits</h3>
+                                <div class="product-image">
+                                    <img src="pictures/biscuits1.jpg" alt="Biscuits">
                                 </div>
                             </div>
-                            
-                            <div class="space-y-3">
+
+                            <div>
                                 <div class="checkbox-option">
-                                    <input type="checkbox" id="biscuits-5l" class="w-5 h-5 mr-2 accent-pink-600" value="Biscuits 5 Liters" data-price="250.00">
-                                    <label for="biscuits-5l" class="checkbox-label block px-4 py-3 border border-gray-300 rounded cursor-pointer hover:bg-pink-50">
-                                        <span style="font-family:Rancho;">5 Liters</span><span class="float-right font-bold text-pink-600"><span style="font-family:Comic Sans MS;">R250.00</span></span>
+                                    <input type="checkbox" id="biscuits-5l" value="Biscuits 5 Liters" data-price="250.00">
+                                    <label for="biscuits-5l" class="checkbox-label">
+                                        <span>5 Liters</span><span class="price">R250.00</span>
                                     </label>
                                 </div>
-                                
+
                                 <div class="checkbox-option">
-                                    <input type="checkbox" id="biscuits-7l" class="w-5 h-5 mr-2 accent-pink-600" value="Biscuits 7 Liters" data-price="350.00">
-                                    <label for="biscuits-7l" class="checkbox-label block px-4 py-3 border border-gray-300 rounded cursor-pointer hover:bg-pink-50">
-                                        <span style="font-family:Rancho;">7 Liters</span><span class="float-right font-bold text-pink-600"><span style="font-family:Comic Sans MS;">R350.00</span></span>
-                                    </span>
+                                    <input type="checkbox" id="biscuits-7l" value="Biscuits 7 Liters" data-price="350.00">
+                                    <label for="biscuits-7l" class="checkbox-label">
+                                        <span>7 Liters</span><span class="price">R350.00</span>
                                     </label>
                                 </div>
-                                
+
                                 <div class="checkbox-option">
-                                    <input type="checkbox" id="biscuits-10l" class="w-5 h-5 mr-2 accent-pink-600" value="Biscuits 10 Liters" data-price="500.00">
-                                    <label for="biscuits-10l" class="checkbox-label block px-4 py-3 border border-gray-300 rounded cursor-pointer hover:bg-pink-50">
-                                        <span style="font-family:Rancho;">10 Liters</span><span class="float-right font-bold text-pink-600"><span style="font-family:Comic Sans MS;">R500.00</span></span>
+                                    <input type="checkbox" id="biscuits-10l" value="Biscuits 10 Liters" data-price="500.00">
+                                    <label for="biscuits-10l" class="checkbox-label">
+                                        <span>10 Liters</span><span class="price">R500.00</span>
                                     </label>
                                 </div>
-                                
+
                                 <div class="checkbox-option">
-                                    <input type="checkbox" id="biscuits-20l" class="w-5 h-5 mr-2 accent-pink-600" value="Biscuits 20 Liters" data-price="1000.00">
-                                    <label for="biscuits-20l" class="checkbox-label block px-4 py-3 border border-gray-300 rounded cursor-pointer hover:bg-pink-50">
-                                        <span style="font-family:Rancho;">20 Liters</span><span class="float-right font-bold text-pink-600"><span style="font-family:Comic Sans MS;">R1 000.00</span></span>
+                                    <input type="checkbox" id="biscuits-20l" value="Biscuits 20 Liters" data-price="1000.00">
+                                    <label for="biscuits-20l" class="checkbox-label">
+                                        <span>20 Liters</span><span class="price">R1 000.00</span>
                                     </label>
                                 </div>
-                                
-                                <div class="mt-4">
-                                    <label for="biscuits-quantity" class="block mb-1"><span style="font-family:Rancho;">Quantity</span></label>
-                                    <input type="number" id="biscuits-quantity" class="w-full px-3 py-2 border border-gray-300 rounded" min="1" value="1">
+
+                                <div class="quantity-input">
+                                    <label for="biscuits-quantity">Quantity</label>
+                                    <input type="number" id="biscuits-quantity" min="1" value="1">
                                 </div>
-                                
-                                <button onclick="addSelectedToCart('biscuits')" class="w-full mt-4 bg-pink-600 text-white py-3 rounded font-bold hover:bg-pink-700 transition">
-                                   <span style="font-family:Comic Sans MS;">Add to Cart</span>
+
+                                <button onclick="addSelectedToCart('biscuits')" class="btn">
+                                    <span>Add to Cart</span>
                                 </button>
                             </div>
                         </div>
@@ -206,90 +202,88 @@
                 </div>
             </div>
         </section>
-        
+
         <!-- Mixed Goodies Section -->
-        <section id="mixedgoodies" class="py-12 bg-gray-100">
-            <div class="container mx-auto px-4">
-                <div class="text-center mb-8">
-                    <h1 class="text-5xl font-bold text-pink-600 mb-2"><span style="font-family:Rancho;">Mixed Goodies</span></h1>
-                    <p class="text-gray-600"><span style="font-family:Comic Sans MS;">Centerpiece desserts that add a festive touch to special events, <br> often customized with themes, colours, and personal messages</span></p>
+        <section id="mixedgoodies" class="bg-gray">
+            <div class="container">
+                <div class="section-title">
+                    <h1>Mixed Goodies</h1>
+                    <p>Centerpiece desserts that add a festive touch to special events,<br> often customized with themes, colours, and personal messages</p>
                 </div>
-                
-                <div class="bg-white rounded-lg shadow-md overflow-hidden max-w-4xl mx-auto">
-                    <div class="flex flex-col md:flex-row">
-                        <div class="w-full md:w-1/3 bg-pink-600 text-white p-6 text-center">
-                            <div class="w-full h-48 rounded flex items-center justify-center mb-6">
-                            <img src="pictures/mixed .jpg" style="height: 100%;">
-                            </div>
-                            <h2 class="text-2xl font-bold mb-4"><span style="font-family:Rancho;">Includes:</span></h2>
-                            <ul class="space-y-2">
-                                <li class="flex items-center justify-center"><i class="fas fa-check-circle mr-2"></i><span style="font-family:Comic Sans MS;">Jemtart</span></li>
-                                <li class="flex items-center justify-center"><i class="fas fa-check-circle mr-2"></i> <span style="font-family:Comic Sans MS;">Red cake</span></li>
-                                <li class="flex items-center justify-center"><i class="fas fa-check-circle mr-2"></i> <span style="font-family:Comic Sans MS;">Biscuits</span></li>
-                                <li class="flex items-center justify-center"><i class="fas fa-check-circle mr-2"></i> <span style="font-family:Comic Sans MS;">Muffins</span></li>
+
+                <div class="mixed-goodies">
+                    <div class="mixed-left">
+                        <div class="mixed-image">
+                            <img src="pictures/mixed.jpg" alt="Mixed Goodies">
+                        </div>
+                        <div class="mixed-includes">
+                            <h2>Includes:</h2>
+                            <ul>
+                                <li><i class="fas fa-check-circle"></i>Jemtart</li>
+                                <li><i class="fas fa-check-circle"></i>Red cake</li>
+                                <li><i class="fas fa-check-circle"></i>Biscuits</li>
+                                <li><i class="fas fa-check-circle"></i>Muffins</li>
                             </ul>
                         </div>
-                        
-                        <div class="w-full md:w-2/3 p-6">
-                            <div class="space-y-3">
-                                <div class="checkbox-option">
-                                    <input type="checkbox" id="mixed-20l" class="w-5 h-5 mr-2 accent-pink-600" value="Mixed Goodies 20 Liters" data-price="1200.00">
-                                    <label for="mixed-20l" class="checkbox-label block px-4 py-3 border border-gray-300 rounded cursor-pointer hover:bg-pink-50">
-                                        <span style="font-family:Rancho;">20 Liters</span><span class="float-right font-bold text-pink-600"><span style="font-family:Comic Sans MS;">R1 200.00</span></span>
-                                    </label>
-                                </div>
-                                
-                                <div class="checkbox-option">
-                                    <input type="checkbox" id="mixed-10l" class="w-5 h-5 mr-2 accent-pink-600" value="Mixed Goodies 10 Liters" data-price="600.00">
-                                    <label for="mixed-10l" class="checkbox-label block px-4 py-3 border border-gray-300 rounded cursor-pointer hover:bg-pink-50">
-                                        <span style="font-family:Rancho;">10 Liters</span><span class="float-right font-bold text-pink-600"><span style="font-family:Comic Sans MS;">R600.00</span></span>
-                                    </label>
-                                </div>
-                                
-                                <div class="checkbox-option">
-                                    <input type="checkbox" id="mixed-tin" class="w-5 h-5 mr-2 accent-pink-600" value="Mixed Goodies Tin" data-price="400.00">
-                                    <label for="mixed-tin" class="checkbox-label block px-4 py-3 border border-gray-300 rounded cursor-pointer hover:bg-pink-50">
-                                        <span style="font-family:Rancho;">Tin</span><span class="float-right font-bold text-pink-600"><span style="font-family:Comic Sans MS;">R400.00</span></span>
-                                    </label>
-                                </div>
-                                
-                                <button onclick="addSelectedToCart('mixedgoodies')" class="w-full mt-6 bg-pink-600 text-white py-3 rounded font-bold hover:bg-pink-700 transition">
-                                    <span style="font-family:Comic Sans MS;">Add to Cart</span>
-                                </button>
+                    </div>
+
+                    <div class="mixed-right">
+                        <div>
+                            <div class="checkbox-option">
+                                <input type="checkbox" id="mixed-20l" value="Mixed Goodies 20 Liters" data-price="1200.00">
+                                <label for="mixed-20l" class="checkbox-label">
+                                    <span>20 Liters</span><span class="price">R1 200.00</span>
+                                </label>
                             </div>
+
+                            <div class="checkbox-option">
+                                <input type="checkbox" id="mixed-10l" value="Mixed Goodies 10 Liters" data-price="600.00">
+                                <label for="mixed-10l" class="checkbox-label">
+                                    <span>10 Liters</span><span class="price">R600.00</span>
+                                </label>
+                            </div>
+
+                            <div class="checkbox-option">
+                                <input type="checkbox" id="mixed-tin" value="Mixed Goodies Tin" data-price="400.00">
+                                <label for="mixed-tin" class="checkbox-label">
+                                    <span>Tin</span><span class="price">R400.00</span>
+                                </label>
+                            </div>
+
+                            <button onclick="addSelectedToCart('mixedgoodies')" class="btn">
+                                <span>Add to Cart</span>
+                            </button>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-        
+
         <!-- Celebration Cakes Section -->
-        <section id="celebrationcake" class="py-12">
-            <div class="container mx-auto px-4">
-                <div class="text-center mb-8">
-                    <h1 class="text-5xl font-bold text-pink-600 mb-2"><span style="font-family:Rancho;">Celebration Cakes</span></h1>
-                    <p class="text-gray-600 max-w-2xl mx-auto"><span style="font-family:Comic Sans MS;">A playful and delicious cakes topped with an assortment of treats,<br> making them perfect for those who love a mix of flavors and textures in every bite.</span></p>
+        <section id="celebrationcake">
+            <div class="container">
+                <div class="section-title">
+                    <h1>Celebration Cakes</h1>
+                    <p>A playful and delicious cakes topped with an assortment of treats,<br> making them perfect for those who love a mix of flavors and textures in every bite.</p>
                 </div>
-                
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+                <div class="celebration-grid">
                     <!-- 1 Tire Cake -->
-                    <div class="bg-white rounded-lg shadow-md overflow-hidden transition-transform hover:-translate-y-1">
-                        <div class="p-6">
+                    <div class="product-card">
+                        <div class="product-content">
                             <div class="flex items-center mb-4">
                                 <input type="checkbox" id="1tire-cake" class="w-5 h-5 mr-2 accent-pink-600">
-                                <label for="1tire-cake" class="text-xl font-bold text-pink-600"><span style="font-family:Rancho;">1 Tire Cake</span></label>
+                                <label for="1tire-cake" class="text-xl font-bold text-pink-600" style="font-family:'Rancho', cursive;">1 Tire Cake</label>
                             </div>
-                            
-                            <div class="w-full h-48 rounded flex items-center justify-center mb-6">
-                            
-                                    <img src="icons/1tire.png" style="height: 90%;">
-                            
+
+                            <div class="product-image mb-6">
+                                <img src="icons/1tire.png" alt="1 Tire Cake">
                             </div>
-                            
-                            <div class="space-y-4">
-                                <div>
-                                    <label for="occasion1" class="block mb-1"><span style="font-family:Comic Sans MS;">Occasion:</span></label>
-                                    <select id="occasion1" class="w-full px-3 py-2 border border-gray-300 rounded">
+
+                            <div>
+                                <div class="form-group">
+                                    <label for="occasion1">Occasion:</label>
+                                    <select id="occasion1">
                                         <option value="">Select Occasion</option>
                                         <option value="Birthday Cake">Birthday Cake</option>
                                         <option value="Wedding Cake">Wedding Cake</option>
@@ -297,48 +291,48 @@
                                         <option value="Anniversaty Cake">Anniversary Cake</option>
                                     </select>
                                 </div>
-                                
-                                <div>
-                                    <label for="size1" class="block mb-1"><span style="font-family:Comic Sans MS;">Size:</span></label>
-                                    <select id="size1" class="w-full px-3 py-2 border border-gray-300 rounded">
+
+                                <div class="form-group">
+                                    <label for="size1">Size:</label>
+                                    <select id="size1">
                                         <option value="">Select Size</option>
                                         <option value="15cm" data-price="750.00">15cm serve:24 people R750.00</option>
                                         <option value="20cm" data-price="1100.00">20cm serve:36 people R1 100.00</option>
                                     </select>
                                 </div>
-                                
-                                <div>
-                                    <label for="flavour1" class="block mb-1"><span style="font-family:Comic Sans MS;">Flavour:</span></label>
-                                    <select id="flavour1" class="w-full px-3 py-2 border border-gray-300 rounded">
+
+                                <div class="form-group">
+                                    <label for="flavour1">Flavour:</label>
+                                    <select id="flavour1">
                                         <option value="">Select Flavour</option>
                                         <option value="Vanilla">Vanilla</option>
                                         <option value="Chocolate">Chocolate</option>
                                     </select>
                                 </div>
-                                
-                                <button onclick="addSelectedToCart('1tire-cake')" class="w-full mt-4 bg-pink-600 text-white py-3 rounded font-bold hover:bg-pink-700 transition">
-                                     <span style="font-family:Comic Sans MS;">Add to Cart</span>
+
+                                <button onclick="addSelectedToCart('1tire-cake')" class="btn">
+                                    <span>Add to Cart</span>
                                 </button>
                             </div>
                         </div>
                     </div>
-                    
+
                     <!-- 2 Tire Cake -->
-                    <div class="bg-white rounded-lg shadow-md overflow-hidden transition-transform hover:-translate-y-1">
-                        <div class="p-6">
+                    <div class="product-card">
+                        <div class="product-content">
                             <div class="flex items-center mb-4">
                                 <input type="checkbox" id="2tire-cake" class="w-5 h-5 mr-2 accent-pink-600">
-                                <label for="2tire-cake" class="text-xl font-bold text-pink-600"><span style="font-family:Rancho;">2 Tire Cake</span></label>
+                                <label for="2tire-cake" class="text-xl font-bold text-pink-600" style="font-family:'Rancho', cursive;">2 Tire Cake</label>
                             </div>
-                            
-                            <div class="w-full h-48 rounded flex items-center justify-center mb-6">
-                                <img src="icons/2tire.png" style="height: 100%;">
+
+                            <div class="product-image mb-6">
+                                <img src="icons/2tire.png" alt="2 Tire Cake">
                             </div>
-                            
-                            <div class="space-y-4">
-                                <div>
-                                    <label for="occasion2" class="block mb-1"><span style="font-family:Comic Sans MS;">Occasion:</span></label>
-                                    <select id="occasion2" class="w-full px-3 py-2 border border-gray-300 rounded">
+
+                            <div>
+                                <div class="form-group">
+                                    <label for="occasion2">Occasion:</label>
+                                    <select id="occasion2">
                                         <option value="">Select Occasion</option>
                                         <option value="Birthday Cake">Birthday Cake</option>
                                         <option value="Wedding Cake">Wedding Cake</option>
@@ -346,103 +340,103 @@
                                         <option value="Anniversaty Cake">Anniversary Cake</option>
                                     </select>
                                 </div>
-                                
-                                <div>
-                                    <label for="size2" class="block mb-1"><span style="font-family:Comic Sans MS;">Size:</span></label>
-                                    <select id="size2" class="w-full px-3 py-2 border border-gray-300 rounded">
+
+                                <div class="form-group">
+                                    <label for="size2">Size:</label>
+                                    <select id="size2">
                                         <option value="">Select Size</option>
                                         <option value="37cm" data-price="2100.00">15cm and 22cm serve:50+ people R2 100.00</option>
                                     </select>
                                 </div>
-                                
-                                <div>
-                                    <label for="top-flavour2" class="block mb-1"><span style="font-family:Comic Sans MS;">Top Flavour:</span></label>
-                                    <select id="top-flavour2" class="w-full px-3 py-2 border border-gray-300 rounded">
+
+                                <div class="form-group">
+                                    <label for="top-flavour2">Top Flavour:</label>
+                                    <select id="top-flavour2">
                                         <option value="">Select Flavour</option>
                                         <option value="Vanilla">Vanilla</option>
                                         <option value="Chocolate">Chocolate</option>
                                     </select>
                                 </div>
-                                
-                                <div>
-                                    <label for="bottom-flavour2" class="block mb-1"><span style="font-family:Comic Sans MS;">Bottom Flavour:</span></label>
-                                    <select id="bottom-flavour2" class="w-full px-3 py-2 border border-gray-300 rounded">
+
+                                <div class="form-group">
+                                    <label for="bottom-flavour2">Bottom Flavour:</label>
+                                    <select id="bottom-flavour2">
                                         <option value="">Select Flavour</option>
                                         <option value="Vanilla">Vanilla</option>
                                         <option value="Chocolate">Chocolate</option>
                                     </select>
                                 </div>
-                                
-                                <button onclick="addSelectedToCart('2tire-cake')" class="w-full mt-4 bg-pink-600 text-white py-3 rounded font-bold hover:bg-pink-700 transition">
-                                     <span style="font-family:Comic Sans MS;">Add to Cart</span>
+
+                                <button onclick="addSelectedToCart('2tire-cake')" class="btn">
+                                    <span>Add to Cart</span>
                                 </button>
                             </div>
                         </div>
                     </div>
-                    
+
                     <!-- Banto Cake -->
-                    <div class="bg-white rounded-lg shadow-md overflow-hidden transition-transform hover:-translate-y-1">
-                        <div class="p-6">
+                    <div class="product-card">
+                        <div class="product-content">
                             <div class="flex items-center mb-4">
                                 <input type="checkbox" id="banto3" class="w-5 h-5 mr-2 accent-pink-600">
-                                <label for="banto3" class="text-xl font-bold text-pink-600"><span style="font-family:Rancho;">Banto Cake</span></label>
+                                <label for="banto3" class="text-xl font-bold text-pink-600" style="font-family:'Rancho', cursive;">Banto Cake</label>
                             </div>
-                            
-                            <div class="w-full h-48 rounded flex items-center justify-center mb-6">
-                                <img src="icons/bento.png" style="height: 90%;">
+
+                            <div class="product-image mb-6">
+                                <img src="icons/bento.png" alt="Banto Cake">
                             </div>
-                            
-                            <div class="space-y-4">
-                                <div>
-                                    <label for="occasion3" class="block mb-1"><span style="font-family:Comic Sans MS;">Occasion</span></label>
-                                    <select id="occasion3" class="w-full px-3 py-2 border border-gray-300 rounded">
+
+                            <div>
+                                <div class="form-group">
+                                    <label for="occasion3">Occasion</label>
+                                    <select id="occasion3">
                                         <option value="">Select Occasion</option>
                                         <option value="Birthday Cake">Birthday Cake</option>
                                         <option value="Baby Shower Cake">Baby Shower Cake</option>
                                         <option value="Anniversaty Cake">Anniversary Cake</option>
                                     </select>
                                 </div>
-                                
-                                <div>
-                                    <label for="size3" class="block mb-1"><span style="font-family:Comic Sans MS;">Size:</span></label>
-                                    <select id="size3" class="w-full px-3 py-2 border border-gray-300 rounded">
+
+                                <div class="form-group">
+                                    <label for="size3">Size:</label>
+                                    <select id="size3">
                                         <option value="">Select Size</option>
                                         <option value="12cm" data-price="550.00">12cm with 5 cup cakes R550.00</option>
                                     </select>
                                 </div>
-                                
-                                <div>
-                                    <label for="flavour3" class="block mb-1"><span style="font-family:Comic Sans MS;">Flavour:</span></label>
-                                    <select id="flavour3" class="w-full px-3 py-2 border border-gray-300 rounded">
+
+                                <div class="form-group">
+                                    <label for="flavour3">Flavour:</label>
+                                    <select id="flavour3">
                                         <option value="">Select Flavour</option>
                                         <option value="Vanilla">Vanilla</option>
                                         <option value="Chocolate">Chocolate</option>
                                     </select>
                                 </div>
-                                
-                                <button onclick="addSelectedToCart('banto3')" class="w-full mt-4 bg-pink-600 text-white py-3 rounded font-bold hover:bg-pink-700 transition">
-                                    <span style="font-family:Comic Sans MS;">Add to Cart</span>
+
+                                <button onclick="addSelectedToCart('banto3')" class="btn">
+                                    <span>Add to Cart</span>
                                 </button>
                             </div>
                         </div>
                     </div>
-                    
+
                     <!-- Muffin Cake -->
-                    <div class="bg-white rounded-lg shadow-md overflow-hidden transition-transform hover:-translate-y-1">
-                        <div class="p-6">
+                    <div class="product-card">
+                        <div class="product-content">
                             <div class="flex items-center mb-4">
                                 <input type="checkbox" id="cup-cakes" class="w-5 h-5 mr-2 accent-pink-600">
-                                <label for="cup-cakes" class="text-xl font-bold text-pink-600"><span style="font-family:Rancho;">Muffin Cake</span></label>
+                                <label for="cup-cakes" class="text-xl font-bold text-pink-600" style="font-family:'Rancho', cursive;">Muffin Cake</label>
                             </div>
-                            
-                            <div class="w-full h-48 rounded flex items-center justify-center mb-6">
-                                <img src="icons/cup.png" style="height: 100%;">
+
+                            <div class="product-image mb-6">
+                                <img src="icons/cup.png" alt="Muffin Cake">
                             </div>
-                            
-                            <div class="space-y-4">
-                                <div>
-                                    <label for="occasion4" class="block mb-1"><span style="font-family:Comic Sans MS;">Occasion:</span></label>
-                                    <select id="occasion4" class="w-full px-3 py-2 border border-gray-300 rounded">
+
+                            <div>
+                                <div class="form-group">
+                                    <label for="occasion4">Occasion:</label>
+                                    <select id="occasion4">
                                         <option value="">Select Occasion</option>
                                         <option value="Birthday Cake">Birthday</option>
                                         <option value="Wedding Cake">Wedding</option>
@@ -450,33 +444,33 @@
                                         <option value="Anniversaty Cake">Anniversary</option>
                                     </select>
                                 </div>
-                                
-                                <div>
-                                    <label for="cupcake-quantity" class="block mb-1"><span style="font-family:Comic Sans MS;">Quantity</span></label>
-                                    <input type="number" id="cupcake-quantity" class="w-full px-3 py-2 border border-gray-300 rounded" placeholder="min. of 12 cup cakes" min="12">
+
+                                <div class="form-group">
+                                    <label for="cupcake-quantity">Quantity</label>
+                                    <input type="number" id="cupcake-quantity" placeholder="min. of 12 cup cakes" min="12">
                                 </div>
-                                
-                                <div>
-                                    <label for="flavour4" class="block mb-1"><span style="font-family:Comic Sans MS;">Flavour:</span></label>
-                                    <select id="flavour4" class="w-full px-3 py-2 border border-gray-300 rounded">
+
+                                <div class="form-group">
+                                    <label for="flavour4">Flavour:</label>
+                                    <select id="flavour4">
                                         <option value="">Select Flavour</option>
                                         <option value="Vanilla">Vanilla</option>
                                         <option value="Chocolate">Chocolate</option>
                                     </select>
                                 </div>
-                                
-                                <div>
-                                    <label for="model" class="block mb-1"><span style="font-family:Comic Sans MS;">Model:</span></label>
-                                    <select id="model" class="w-full px-3 py-2 border border-gray-300 rounded">
+
+                                <div class="form-group">
+                                    <label for="model">Model:</label>
+                                    <select id="model">
                                         <option value="">Select Model</option>
                                         <option value="plain" data-price="25.00">plain R25.00 each</option>
                                         <option value="2D" data-price="35.00">2D print R30.00 each</option>
                                         <option value="3D" data-price="25.00">3D sculpt R45.00 each</option>
                                     </select>
                                 </div>
-                                
-                                <button onclick="addSelectedToCart('cup-cakes')" class="w-full mt-4 bg-pink-600 text-white py-3 rounded font-bold hover:bg-pink-700 transition">
-                                    <span style="font-family:Comic Sans MS;">Add to Cart</span>
+
+                                <button onclick="addSelectedToCart('cup-cakes')" class="btn">
+                                    <span>Add to Cart</span>
                                 </button>
                             </div>
                         </div>
@@ -484,248 +478,256 @@
                 </div>
             </div>
         </section>
-        
+
         <!-- Cake Topping Section -->
-        <section id="cake-topping" class="py-12 bg-gray-100">
-            <div class="container mx-auto px-4">
-                <div class="text-center mb-8">
-                    <h2 class="text-5xl font-bold text-pink-600 mb-2"><span style="font-family:Rancho;">Cake Topping</span></h2>
-                    <p class="text-gray-600 max-w-2xl mx-auto"><span style="font-family:Comic Sans MS;">Cake toppings enhance tast and style with sweet, colourful finiishes.</p>
+        <section id="cake-topping" class="bg-gray">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Cake Topping</h2>
+                    <p>Cake toppings enhance tast and style with sweet, colourful finiishes.</p>
                 </div>
-                
-                <div class="bg-white rounded-lg shadow-md overflow-hidden max-w-4xl mx-auto p-6">
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+                <div class="toppings-container">
+                    <div class="toppings-grid">
                         <!-- Left Toppings -->
-                        <div class="space-y-4">
+                        <div>
                             <!-- Letters -->
-                            <div class="flex items-start">
-                                <div class="w-14 h-14 bg-gray-100 rounded flex items-center justify-center mr-4">
-                                    <i class="fas fa-font text-2xl"></i>
+                            <div class="topping-item">
+                                <div class="topping-icon">
+                                    <i class="fas fa-font"></i>
                                 </div>
-                                <div class="flex-1">
-                                    <div class="flex items-center">
-                                        <input type="checkbox" id="letters" class="w-5 h-5 mr-2 accent-pink-600" data-price="5.00">
-                                        <label for="letters"><span style="font-family:Comic Sans MS;">Letters:<span style="color:#EC5988;">    R5.00 each</span></span></label>
+                                <div class="topping-content">
+                                    <div class="topping-checkbox">
+                                        <input type="checkbox" id="letters" data-price="5.00">
+                                        <label for="letters">Letters:<span class="topping-price">R5.00 each</span></label>
                                     </div>
-                                    <div class="mt-2">
-                                        <label for="quantity-letters" class="block mb-1"><span style="font-family:Rancho;">Quantity</span></label>
-                                        <input type="number" id="quantity-letters" class="w-20 px-3 py-2 border border-gray-300 rounded" min="1" value="1">
+                                    <div class="topping-quantity">
+                                        <label for="quantity-letters">Quantity</label>
+                                        <input type="number" id="quantity-letters" min="1" value="1">
                                     </div>
                                 </div>
                             </div>
-                            
+
                             <!-- Polystyren Balls -->
-                            <div class="flex items-start">
-                                <div class="w-14 h-14 bg-gray-100 rounded flex items-center justify-center mr-4">
-                                    <i class="fas fa-circle text-2xl"></i>
+                            <div class="topping-item">
+                                <div class="topping-icon">
+                                    <i class="fas fa-circle"></i>
                                 </div>
-                                <div class="flex-1">
-                                    <div class="flex items-center">
-                                        <input type="checkbox" id="polystyren" class="w-5 h-5 mr-2 accent-pink-600" data-price="5.00">
-                                        <label for="polystyren"><span style="font-family:Comic Sans MS;">Polystyren Balls: <span style="color:#EC5988;">R5.00 each</span></span></label>
+                                <div class="topping-content">
+                                    <div class="topping-checkbox">
+                                        <input type="checkbox" id="polystyren" data-price="5.00">
+                                        <label for="polystyren">Polystyren Balls: <span class="topping-price">R5.00 each</span></label>
                                     </div>
-                                    <div class="mt-2">
-                                        <label for="quantity-polystyren" class="block mb-1"><span style="font-family:Rancho;">Quantity</span></label>
-                                        <input type="number" id="quantity-polystyren" class="w-20 px-3 py-2 border border-gray-300 rounded" min="1" value="1">
+                                    <div class="topping-quantity">
+                                        <label for="quantity-polystyren">Quantity</label>
+                                        <input type="number" id="quantity-polystyren" min="1" value="1">
                                     </div>
                                 </div>
                             </div>
-                            
+
                             <!-- Flower Stem -->
-                            <div class="flex items-start">
-                                <div class="w-14 h-14 bg-gray-100 rounded flex items-center justify-center mr-4">
-                                    <i class="fas fa-leaf text-2xl"></i>
+                            <div class="topping-item">
+                                <div class="topping-icon">
+                                    <i class="fas fa-leaf"></i>
                                 </div>
-                                <div class="flex-1">
-                                    <div class="flex items-center">
-                                        <input type="checkbox" id="flower" class="w-5 h-5 mr-2 accent-pink-600" data-price="5.00">
-                                        <label for="flower"><span style="font-family:Comic Sans MS;">Flower Stem: <span style="color:#EC5988;">R5.00 each</span></span></label>
+                                <div class="topping-content">
+                                    <div class="topping-checkbox">
+                                        <input type="checkbox" id="flower" data-price="5.00">
+                                        <label for="flower">Flower Stem: <span class="topping-price">R5.00 each</span></label>
                                     </div>
-                                    <div class="mt-2">
-                                        <label for="quantity-flower" class="block mb-1"><span style="font-family:Rancho;">Quantity</span></label>
-                                        <input type="number" id="quantity-flower" class="w-20 px-3 py-2 border border-gray-300 rounded" min="1" value="1">
+                                    <div class="topping-quantity">
+                                        <label for="quantity-flower">Quantity</label>
+                                        <input type="number" id="quantity-flower" min="1" value="1">
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        
+
                         <!-- Right Toppings -->
-                        <div class="space-y-4">
+                        <div>
                             <!-- Cake Print -->
-                            <div class="flex items-start">
-                                <div class="w-14 h-14 bg-gray-100 rounded flex items-center justify-center mr-4">
-                                    <i class="fas fa-print text-2xl"></i>
+                            <div class="topping-item">
+                                <div class="topping-icon">
+                                    <i class="fas fa-print"></i>
                                 </div>
-                                <div class="flex-1">
-                                    <div class="flex items-center">
-                                        <input type="checkbox" id="cakeprint" class="w-5 h-5 mr-2 accent-pink-600" data-price="150.00">
-                                        <label for="cakeprint"><span style="font-family:Comic Sans MS;">Cake Print:<span style="color:#EC5988; "><br>R150.00 each</span></span> </label>
+                                <div class="topping-content">
+                                    <div class="topping-checkbox">
+                                        <input type="checkbox" id="cakeprint" data-price="150.00">
+                                        <label for="cakeprint">Cake Print:<span class="topping-price"><br>R150.00 each</span></label>
                                     </div>
                                 </div>
                             </div>
-                            
+
                             <!-- Cup Cake Print -->
-                            <div class="flex items-start">
-                                <div class="w-14 h-14 bg-gray-100 rounded flex items-center justify-center mr-4">
-                                    <i class="fas fa-print text-2xl"></i>
+                            <div class="topping-item">
+                                <div class="topping-icon">
+                                    <i class="fas fa-print"></i>
                                 </div>
-                                <div class="flex-1">
-                                    <div class="flex items-center">
-                                        <input type="checkbox" id="cup-print" class="w-5 h-5 mr-2 accent-pink-600" data-price="250.00">
-                                        <label for="cup-print"><span style="font-family:Comic Sans MS;">Cup Cake Print: <span style="font-family:Comic Sans MS;"><br><span style="color: #EC5988;">R360.00 (min of 12 cakes)<span></span></label>
+                                <div class="topping-content">
+                                    <div class="topping-checkbox">
+                                        <input type="checkbox" id="cup-print" data-price="250.00">
+                                        <label for="cup-print">Cup Cake Print: <span><br><span class="topping-price">R360.00 (min of 12 cakes)</span></label>
                                     </div>
                                 </div>
                             </div>
-                            
+
                             <!-- Custom Topping -->
-                            <div class="flex items-start">
-                                <div class="w-14 h-14 bg-gray-100 rounded flex items-center justify-center mr-4">
-                                    <i class="fas fa-star text-2xl"></i>
+                            <div class="topping-item">
+                                <div class="topping-icon">
+                                    <i class="fas fa-star"></i>
                                 </div>
-                                <div class="flex-1">
-                                    <div class="flex items-center">
-                                        <input type="checkbox" id="customtopping" class="w-5 h-5 mr-2 accent-pink-600" data-price="250.00">
-                                        <label for="customtopping"><span style="font-family:Comic Sans MS;">Custom Topping:<br> <span style="color: #EC5988;">R250.00</span></span></label>
+                                <div class="topping-content">
+                                    <div class="topping-checkbox">
+                                        <input type="checkbox" id="customtopping" data-price="250.00">
+                                        <label for="customtopping">Custom Topping:<br> <span class="topping-price">R250.00</span></label>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    
-                    <button onclick="addSelectedToCart('topping')" class="w-full mt-8 bg-pink-600 text-white py-3 rounded font-bold hover:bg-pink-700 transition">
+
+                    <button onclick="addSelectedToCart('topping')" class="btn">
                         Add to Cart
                     </button>
                 </div>
             </div>
         </section>
-        
+
         <!-- Place Order Section -->
-        <section id="place-order" class="py-12">
-            <div class="container mx-auto px-4">
-                <div class="bg-white rounded-lg shadow-md overflow-hidden">
-                    <div class="flex flex-col lg:flex-row">
-                        <div class="w-full lg:w-1/2 p-6">
+        <section id="place-order">
+            <div class="container">
+                <div class="order-container">
+                    <div class="order-grid">
+                        <div class="order-left">
                             <div class="mb-8">
-                                <h3 class="text-3xl  text-pink-600 mb-4" style="font-family:Rancho;">Please kindly describe your desired cake</h3>
-                                <p class="text-gray-600 mb-4" style="font-family:Comic Sans MS;">
+                                <h3 class="order-title">Please kindly describe your desired cake</h3>
+                                <p class="order-description">
                                     Describe your desired look of your cake according to what you have envisioned, along with uploading an image of inspiration.
                                 </p>
-                                
-                                <div class="mb-4">
-                                    <label for="description" class="block mb-2" style="font-family:Comic Sans MS;">Message:</label>
-                                    <textarea id="description" name="description" rows="4" class="w-full px-3 py-2 border border-gray-300 rounded" required></textarea>
+
+                                <div class="form-group">
+                                    <label for="description">Message:</label>
+                                    <textarea id="description" name="description" required></textarea>
                                 </div>
-                                
+
                                 <div class="file-upload">
-                                    <label for="file-upload" class="file-upload-label block p-8 border-2 border-dashed border-pink-600 rounded text-center text-pink-600 cursor-pointer hover:bg-pink-50 transition">
-                                        <div class="file-upload-icon mb-2">
-                                            <i class="fas fa-cloud-upload-alt text-3xl"></i>
+                                    <label for="file-upload" class="file-upload-label">
+                                        <div class="file-upload-icon">
+                                            <i class="fas fa-cloud-upload-alt"></i>
                                         </div>
-                                        <div class="font-medium" style="font-family:Comic Sans MS;">Click to upload image</div>
-                                        <div class="text-sm">or drag and drop</div>
+                                        <div class="file-upload-text">Click to upload image</div>
+                                        <div class="file-upload-subtext">or drag and drop</div>
                                     </label>
                                     <input type="file" id="file-upload">
-                                    <div class="file-name text-sm text-gray-500 mt-1" id="file-name" ></div>
+                                    <div class="file-name" id="file-name"></div>
                                 </div>
                             </div>
-                            
+
                             <!-- Cart Display -->
                             <div id="items">
-                                <h3 class="text-2xl text-pink-600 mb-4" style="font-family:Rancho;">Your Order Summary</h3>
-                                <div id="cart-display" class="bg-gray-50 p-4 rounded min-h-40 mb-4">
-                                    <p class="text-gray-500" style="font-family:Comic Sans MS;">Your cart is empty.</p>
+                                <h3 class="order-title">Your Order Summary</h3>
+                                <div id="cart-display" class="cart-display">
+                                    <p class="cart-empty">Your cart is empty.</p>
                                 </div>
-                                <div class="flex justify-between items-center py-4 border-t border-gray-200">
-                                    <span class="text-xl" style="font-family:Rancho;">Total:</span>
-                                    <span id="cart-total" class="text-xl font-bold text-pink-600" style="font-family:Comic Sans MS;">R0.00</span>
+                                <div class="cart-total">
+                                    <span class="cart-total-label">Total:</span>
+                                    <span id="cart-total" class="cart-total-amount">R0.00</span>
                                 </div>
-                                
                             </div>
                         </div>
-                        
-                        <div class="w-full lg:w-1/2 p-6 bg-gray-50">
+
+                        <div class="order-right">
                             <div class="mb-8">
-                                <div class="flex items-center mb-4">
-                                    <div class="w-10 h-10 rounded-full bg-pink-600 text-white flex items-center justify-center mr-3">
+                                <div class="note-container">
+                                    <div class="note-icon">
                                         <i class="fas fa-exclamation"></i>
                                     </div>
-                                    <h3 class="text-5xl font-bold text-pink-600" style="font-family:Rancho;">NOTE:</h3>
+                                    <h3 class="note-title">NOTE:</h3>
                                 </div>
-                                <div class="bg-white p-4 rounded shadow-sm">
-                                    <p class="text-gray-600" style="font-family:Comic Sans MS;">
+                                <div class="note-content">
+                                    <p class="note-text">
                                         Kindly note that if there are any additional requests towards your cake, the price may increase according to your specifications.
                                     </p>
                                 </div>
                             </div>
-                            
-                            <div class="space-y-4">
-                                <div>
-                                    <label for="name" class="block mb-1" style="font-family:Comic Sans MS;">Name:</label>
-                                    <input type="text" id="name" name="name" class="w-full px-3 py-2 border border-gray-300 rounded" required>
+
+                            <div>
+                                <div class="form-group">
+                                    <label for="name">Name:</label>
+                                    <input type="text" id="name" name="name" required>
                                 </div>
-                                
-                                <div>
-                                    <label for="email" class="block mb-1" style="font-family:Comic Sans MS;">Email:</label>
-                                    <input type="email" id="email" name="email" class="w-full px-3 py-2 border border-gray-300 rounded" required>
+
+                                <div class="form-group">
+                                    <label for="email">Email:</label>
+                                    <input type="email" id="email" name="email" required>
                                 </div>
-                                
-                                <div>
-                                    <label for="phone" class="block mb-1" style="font-family:Comic Sans MS;">WhatsApp #:</label>
-                                    <input type="tel" id="phone" name="phone" class="w-full px-3 py-2 border border-gray-300 rounded" required>
+
+                                <div class="form-group">
+                                    <label for="phone">WhatsApp #:</label>
+                                    <input type="tel" id="phone" name="phone" required>
                                 </div>
-                                
-                                <div>
-                                    <label for="delivery-date" class="block mb-1" style="font-family:Comic Sans MS;">Delivery/Pickup Date:</label>
-                                    <input type="date" id="delivery-date" name="delivery-date" class="w-full px-3 py-2 border border-gray-300 rounded" required>
+
+                                <div class="form-group">
+                                    <label for="delivery-date">Delivery/Pickup Date:</label>
+                                    <input type="date" id="delivery-date" name="delivery-date" required>
                                 </div>
                             </div>
-                            <div class="flex flex-col md:flex-row gap-4 mt-6">
-                                    <button onclick="sendWhatsApp()" class="flex-1 bg-green-500 text-white py-3 rounded font-bold hover:bg-green-600 transition flex items-center justify-center">
-                                        <i class="fab fa-whatsapp mr-2"></i> Send via WhatsApp
-                                    </button>
-                                    
-                                </div>
+                            <div class="button-group">
+                                <button onclick="sendWhatsApp()" class="whatsapp-btn">
+                                    <i class="fab fa-whatsapp"></i> Send via WhatsApp
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
     </main>
-    
-    <footer class="bg-pink-600 text-white py-12">
-        <div class="container mx-auto px-4">
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
-                <div class="text-center">
-                    <h3 class="text-2xl font-bold mb-4" style="font-family:Rancho;">Social</h3>
-                    <div class="flex justify-center space-x-4">
-                        <a href="#" class="w-10 h-10 bg-white text-pink-600 rounded-full flex items-center justify-center hover:bg-pink-700 hover:text-white transition">
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-column">
+                    <h3 class="footer-title">Social</h3>
+                    <div class="social-icons">
+                        <a href="#" class="social-icon">
                             <i class="fab fa-facebook-f"></i>
                         </a>
-                        <a href="#" class="w-10 h-10 bg-white text-pink-600 rounded-full flex items-center justify-center hover:bg-pink-700 hover:text-white transition">
+                        <a href="#" class="social-icon">
                             <i class="fab fa-instagram"></i>
                         </a>
-                        <a href="#" class="w-10 h-10 bg-white text-pink-600 rounded-full flex items-center justify-center hover:bg-pink-700 hover:text-white transition">
+                        <a href="#" class="social-icon">
                             <i class="fab fa-whatsapp"></i>
                         </a>
                     </div>
                 </div>
-                
-                <div class="text-center">
-                    <h3 class="text-2xl font-bold mb-4" style="font-family:Rancho;">Address</h3>
-                    <p style="font-family:Comic Sans MS;">123 Bakery Street<br>Sweetville, 12345<br>South Africa</p>
+
+                <div class="footer-column">
+                    <h3 class="footer-title">Address</h3>
+                    <p class="footer-text">123 Bakery Street<br>Sweetville, 12345<br>South Africa</p>
                 </div>
-                
-                <div class="text-center">
-                    <h3 class="text-2xl font-bold mb-4" style="font-family:Rancho;">Hours</h3>
-                    <p style="font-family:Comic Sans MS;">Monday - Friday: 8am - 5pm<br>Saturday: 9am - 2pm<br>Sunday: Closed</p>
+
+                <div class="footer-column">
+                    <h3 class="footer-title">Hours</h3>
+                    <p class="footer-text">Monday - Friday: 8am - 5pm<br>Saturday: 9am - 2pm<br>Sunday: Closed</p>
                 </div>
             </div>
-            
-            <div class="pt-6 border-t border-pink-500 text-center">
-                <p style="font-family:Comic Sans MS;">&copy; 2023 Sweet Delights Bakery. All rights reserved.</p>
+
+            <div class="footer-copyright">
+                <p>&copy; 2023 Sweet Delights Bakery. All rights reserved.</p>
             </div>
         </div>
     </footer>
-    <script src="twinsbakery.js"></script>
+
+    <script>
+        // JavaScript functions would go here
+        function addSelectedToCart(productType) {
+            // Implementation would go here
+        }
+
+        function sendWhatsApp() {
+            // Implementation would go here
+        }
+    </script>
 </body>
 </html>

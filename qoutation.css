@@ -1,27 +1,729 @@
-  /* Custom styles that can't be done with Tailwind */
+        /* Base Styles */
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background-color: #f9fafb;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+
+        /* Header Styles */
+        header {
+            background-color: white;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            position: sticky;
+            top: 0;
+            z-index: 50;
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 16px 0;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo a {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+        }
+
+        .logo-icon {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 20px;
+        }
+
+        .cart-icon {
+            position: relative;
+            color: #ec4899;
+            font-size: 24px;
+        }
+
+        .cart-count {
+            position: absolute;
+            top: -8px;
+            right: -8px;
+            background-color: #ec4899;
+            color: white;
+            font-size: 12px;
+            border-radius: 50%;
+            width: 20px;
+            height: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* Section Styles */
+        section {
+            padding: 48px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 32px;
+        }
+
+        .section-title h1 {
+            font-size: 48px;
+            font-weight: 700;
+            color: #ec4899;
+            margin-bottom: 8px;
+            font-family: 'Rancho', cursive;
+        }
+
+        .section-title p {
+            color: #6b7280;
+            max-width: 640px;
+            margin: 0 auto;
+            font-family: 'Comic Sans MS', cursive;
+        }
+
+        .bg-gray {
+            background-color: #f3f4f6;
+        }
+
+        /* Product Grid */
+        .product-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 24px;
+        }
+
+        @media (min-width: 768px) {
+            .product-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        /* Product Card */
+        .product-card {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+
+        .product-card:hover {
+            transform: translateY(-4px);
+        }
+
+        .product-content {
+            padding: 24px;
+        }
+
+        .product-header {
+            text-align: center;
+            margin-bottom: 24px;
+        }
+
+        .product-header h3 {
+            font-size: 30px;
+            font-weight: 700;
+            color: #ec4899;
+            margin-bottom: 16px;
+            font-family: 'Rancho', cursive;
+        }
+
+        .product-image {
+            width: 100%;
+            height: 192px;
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .product-image img {
+            height: 100%;
+            width: auto;
+            object-fit: cover;
+        }
+
+        /* Checkbox Options */
+        .checkbox-option {
+            margin-bottom: 12px;
+        }
+
         .checkbox-option input[type="checkbox"] {
+            width: 20px;
+            height: 20px;
+            margin-right: 8px;
+            accent-color: #ec4899;
+        }
+
+        .checkbox-label {
+            display: block;
+            padding: 12px 16px;
+            border: 1px solid #d1d5db;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .checkbox-label:hover {
+            background-color: #fdf2f8;
+        }
+
+        .checkbox-label span {
+            font-family: 'Rancho', cursive;
+        }
+
+        .price {
+            float: right;
+            font-weight: 700;
+            color: #ec4899;
+            font-family: 'Comic Sans MS', cursive;
+        }
+
+        /* Quantity Input */
+        .quantity-input {
+            margin-top: 16px;
+        }
+
+        .quantity-input label {
+            display: block;
+            margin-bottom: 4px;
+            font-family: 'Rancho', cursive;
+        }
+
+        .quantity-input input {
+            width: 100%;
+            padding: 8px 12px;
+            border: 1px solid #d1d5db;
+            border-radius: 4px;
+        }
+
+        /* Button Styles */
+        .btn {
+            width: 100%;
+            margin-top: 16px;
+            background-color: #ec4899;
+            color: white;
+            padding: 12px;
+            border-radius: 4px;
+            font-weight: 700;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #db2777;
+        }
+
+        .btn span {
+            font-family: 'Comic Sans MS', cursive;
+        }
+
+        /* Mixed Goodies Section */
+        .mixed-goodies {
+            display: flex;
+            flex-direction: column;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            overflow: hidden;
+            max-width: 896px;
+            margin: 0 auto;
+        }
+
+        @media (min-width: 768px) {
+            .mixed-goodies {
+                flex-direction: row;
+            }
+        }
+
+        .mixed-left {
+            width: 100%;
+            background-color: #ec4899;
+            color: white;
+            padding: 24px;
+            text-align: center;
+        }
+
+        @media (min-width: 768px) {
+            .mixed-left {
+                width: 33.3333%;
+            }
+        }
+
+        .mixed-right {
+            width: 100%;
+            padding: 24px;
+        }
+
+        @media (min-width: 768px) {
+            .mixed-right {
+                width: 66.6667%;
+            }
+        }
+
+        .mixed-image {
+            width: 100%;
+            height: 192px;
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 24px;
+            overflow: hidden;
+        }
+
+        .mixed-image img {
+            height: 100%;
+            width: auto;
+            object-fit: cover;
+        }
+
+        .mixed-includes h2 {
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 16px;
+            font-family: 'Rancho', cursive;
+        }
+
+        .mixed-includes ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .mixed-includes li {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 8px;
+            font-family: 'Comic Sans MS', cursive;
+        }
+
+        .mixed-includes i {
+            margin-right: 8px;
+        }
+
+        /* Celebration Cakes */
+        .celebration-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 24px;
+        }
+
+        @media (min-width: 768px) {
+            .celebration-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        /* Cake Toppings */
+        .toppings-container {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            overflow: hidden;
+            max-width: 896px;
+            margin: 0 auto;
+            padding: 24px;
+        }
+
+        .toppings-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 16px;
+        }
+
+        @media (min-width: 768px) {
+            .toppings-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        .topping-item {
+            display: flex;
+            align-items: flex-start;
+        }
+
+        .topping-icon {
+            width: 56px;
+            height: 56px;
+            background-color: #f3f4f6;
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 16px;
+            font-size: 20px;
+        }
+
+        .topping-content {
+            flex: 1;
+        }
+
+        .topping-checkbox {
+            display: flex;
+            align-items: center;
+        }
+
+        .topping-checkbox input[type="checkbox"] {
+            width: 20px;
+            height: 20px;
+            margin-right: 8px;
+            accent-color: #ec4899;
+        }
+
+        .topping-checkbox label {
+            font-family: 'Comic Sans MS', cursive;
+        }
+
+        .topping-price {
+            color: #ec4899;
+        }
+
+        .topping-quantity {
+            margin-top: 8px;
+        }
+
+        .topping-quantity label {
+            display: block;
+            margin-bottom: 4px;
+            font-family: 'Rancho', cursive;
+        }
+
+        .topping-quantity input {
+            width: 80px;
+            padding: 8px 12px;
+            border: 1px solid #d1d5db;
+            border-radius: 4px;
+        }
+
+        /* Place Order Section */
+        .order-container {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            overflow: hidden;
+        }
+
+        .order-grid {
+            display: flex;
+            flex-direction: column;
+        }
+
+        @media (min-width: 1024px) {
+            .order-grid {
+                flex-direction: row;
+            }
+        }
+
+        .order-left {
+            width: 100%;
+            padding: 24px;
+        }
+
+        @media (min-width: 1024px) {
+            .order-left {
+                width: 50%;
+            }
+        }
+
+        .order-right {
+            width: 100%;
+            padding: 24px;
+            background-color: #f3f4f6;
+        }
+
+        @media (min-width: 1024px) {
+            .order-right {
+                width: 50%;
+            }
+        }
+
+        .order-title {
+            font-size: 32px;
+            color: #ec4899;
+            margin-bottom: 16px;
+            font-family: 'Rancho', cursive;
+        }
+
+        .order-description {
+            color: #6b7280;
+            margin-bottom: 16px;
+            font-family: 'Comic Sans MS', cursive;
+        }
+
+        .form-group {
+            margin-bottom: 16px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-family: 'Comic Sans MS', cursive;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 8px 12px;
+            border: 1px solid #d1d5db;
+            border-radius: 4px;
+        }
+
+        .form-group textarea {
+            height: 120px;
+        }
+
+        .file-upload {
+            margin-bottom: 16px;
+        }
+
+        .file-upload-label {
+            display: block;
+            padding: 32px;
+            border: 2px dashed #ec4899;
+            border-radius: 4px;
+            text-align: center;
+            color: #ec4899;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .file-upload-label:hover {
+            background-color: #fdf2f8;
+        }
+
+        .file-upload-icon {
+            margin-bottom: 8px;
+            font-size: 24px;
+        }
+
+        .file-upload-text {
+            font-weight: 500;
+            font-family: 'Comic Sans MS', cursive;
+        }
+
+        .file-upload-subtext {
+            font-size: 14px;
+        }
+
+        #file-upload {
             display: none;
         }
-        
-        .checkbox-option input:checked + .checkbox-label {
-            background-color: #EC5988;
-            color: #FFFFFF;
-            border-color: #EC5988;
+
+        .file-name {
+            font-size: 14px;
+            color: #6b7280;
+            margin-top: 4px;
         }
-        
-        .file-upload input[type="file"] {
-            display: none;
+
+        /* Cart Display */
+        .cart-display {
+            background-color: #f9fafb;
+            padding: 16px;
+            border-radius: 4px;
+            min-height: 160px;
+            margin-bottom: 16px;
         }
-        
-        .product-image i {
-            color: #EC5988;
+
+        .cart-empty {
+            color: #6b7280;
+            font-family: 'Comic Sans MS', cursive;
         }
-        
-        .topping-icon i {
-            color: #EC5988;
+
+        .cart-total {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 16px 0;
+            border-top: 1px solid #e5e7eb;
         }
-        
-        .note-icon i {
-            color: #FFFFFF;
+
+        .cart-total-label {
+            font-size: 20px;
+            font-family: 'Rancho', cursive;
         }
-        
+
+        .cart-total-amount {
+            font-size: 20px;
+            font-weight: 700;
+            color: #ec4899;
+            font-family: 'Comic Sans MS', cursive;
+        }
+
+        /* Note Section */
+        .note-container {
+            display: flex;
+            align-items: center;
+            margin-bottom: 16px;
+        }
+
+        .note-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: #ec4899;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 12px;
+        }
+
+        .note-title {
+            font-size: 48px;
+            font-weight: 700;
+            color: #ec4899;
+            font-family: 'Rancho', cursive;
+        }
+
+        .note-content {
+            background-color: white;
+            padding: 16px;
+            border-radius: 4px;
+            box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+        }
+
+        .note-text {
+            color: #6b7280;
+            font-family: 'Comic Sans MS', cursive;
+        }
+
+        /* Button Group */
+        .button-group {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            margin-top: 24px;
+        }
+
+        @media (min-width: 768px) {
+            .button-group {
+                flex-direction: row;
+            }
+        }
+
+        .whatsapp-btn {
+            flex: 1;
+            background-color: #25d366;
+            color: white;
+            padding: 12px;
+            border-radius: 4px;
+            font-weight: 700;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .whatsapp-btn:hover {
+            background-color: #128c7e;
+        }
+
+        .whatsapp-btn i {
+            margin-right: 8px;
+        }
+
+        /* Footer Styles */
+        footer {
+            background-color: #ec4899;
+            color: white;
+            padding: 48px 0;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 32px;
+            margin-bottom: 32px;
+        }
+
+        @media (min-width: 768px) {
+            .footer-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        .footer-column {
+            text-align: center;
+        }
+
+        .footer-title {
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 16px;
+            font-family: 'Rancho', cursive;
+        }
+
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 16px;
+        }
+
+        .social-icon {
+            width: 40px;
+            height: 40px;
+            background-color: white;
+            color: #ec4899;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
+
+        .social-icon:hover {
+            background-color: #db2777;
+            color: white;
+        }
+
+        .footer-text {
+            font-family: 'Comic Sans MS', cursive;
+        }
+
+        .footer-copyright {
+            padding-top: 24px;
+            border-top: 1px solid #f472b6;
+            text-align: center;
+            font-family: 'Comic Sans MS', cursive;
+        }
+
+        /* Utility Classes */
+        .text-center {
+            text-align: center;
+        }
+
+        .mx-auto {
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Font Faces */
+        @font-face {
+            font-family: 'Rancho';
+            src: url('https://fonts.googleapis.com/css2?family=Rancho&display=swap');
+        }
