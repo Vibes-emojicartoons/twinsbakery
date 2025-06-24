@@ -1,3 +1,14 @@
+        .rancho-regular {
+            font-family: "Rancho", cursive;
+            font-weight: 400;
+            font-style: normal;
+        }
+        .comic-relief-regular {
+            font-family: "Comic Relief", system-ui;
+            font-weight: 400;
+            font-style: normal;
+        }
+
         /* Base Styles */
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
@@ -141,15 +152,51 @@
         /* Product Grid */
         .product-grid {
             display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+        
+
+        @media (max-width: 768px) {
+            body{
+                max-width: 100%;
+                width: 100%;
+                margin: 0;
+                padding: 0;
+                line-height: 1.6;
+                scroll-behavior: smooth;
+                box-sizing: border-box;
+            }
+            header{
+            position: fixed;
+            width: 768px;
+            max-width: 100%;
+            padding: 5px;
+                
+            }
+            nav{
+                padding-right: 20px;
+            }
+            
+            main{
+                max-width: 100%;
+                width: 100%;
+                margin: 0 auto;
+            }
+            
+            p{
+                font-size: 1rem;
+            }
+            .product-grid {
+            display: grid;
             grid-template-columns: 1fr;
             gap: 24px;
         }
-
-        @media (min-width: 768px) {
-            .product-grid {
-                grid-template-columns: repeat(3, 1fr);
-            }
+       
+            
         }
+        
+    
 
         /* Product Card */
         .product-card {
@@ -245,7 +292,7 @@
         }
 
         .quantity-input input {
-            width: 100%;
+            width: 92%;
             padding: 8px 12px;
             border: 1px solid #d1d5db;
             border-radius: 4px;
@@ -306,7 +353,7 @@
         }
 
         .mixed-right {
-            width: 100%;
+            width: 91%;
             padding: 24px;
         }
 
@@ -493,6 +540,17 @@
             padding: 24px;
             background-color: #f3f4f6;
         }
+        @media (max-width: 768px){
+            .order-right{
+                width: 90%;
+            }
+            .order-left{
+                width: 88%;
+            }
+            .form-container{
+                width: 95%;
+            }
+        }
 
         @media (min-width: 1024px) {
             .order-right {
@@ -660,6 +718,7 @@
         }
 
         @media (min-width: 768px) {
+
             .button-group {
                 flex-direction: row;
             }
@@ -763,8 +822,4 @@
             margin-right: auto;
         }
 
-        /* Font Faces */
-        @font-face {
-            font-family: 'Rancho';
-            src: url('https://fonts.googleapis.com/css2?family=Rancho&display=swap');
-        }
+    
