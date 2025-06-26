@@ -1,3 +1,13 @@
+        .rancho-regular {
+            font-family: "Rancho";
+            font-weight: 400;
+            font-style: normal;
+        }
+        .comic-relief-regular {
+            font-family: "Comic Relief";
+            font-weight: 400;
+            font-style: normal;
+        }
         /* Base Styles */
         :root {
             --primary-color: #EC5988;
@@ -14,7 +24,7 @@
         }
         
         body {
-            font-family: 'Poppins', sans-serif;
+            
             color: #333;
             background-color: var(--white-color);
             line-height: 1.6;
@@ -186,11 +196,11 @@
             color: var(--gray-dark);
             font-size: 1.1rem;
             margin-bottom: 20px;
-            font-family:Comic Sans MS;
+            font-family: "Comic Relief";
         }
         
         .hero-text h6 {
-            font-family:Comic Sans MS;
+            font-family: "Comic Relief";
             font-size: 0.9rem;
             color: var(--gray-medium);
             font-style: italic;
@@ -216,7 +226,7 @@
             font-weight: 600;
         }
         .offer-left p{
-            font-family:Comic Sans MS;
+            font-family: "Comic Relief";
             font-size: 1.3rem;
             color: var(--gray-dark);
         }
@@ -465,7 +475,7 @@
             color: var(--white-color);
             padding: 30px 0;
             text-align: center;
-            font-family:Comic Sans MS;
+            font-family: "Comic Relief";
         }
         
         .footer-content {
@@ -488,7 +498,7 @@
         
         .footer-links a:hover {
             color: rgba(255, 255, 255, 0.8);
-            font-family:Comic Sans MS;
+            font-family: "Comic Relief";
         }
         
         /* Responsive Styles */
@@ -502,7 +512,7 @@
             
             
             #section-one {
-                padding-top: 20px;
+                padding-top: 90px;
             }
             #section-two{
                 padding: 18px 0;
@@ -524,6 +534,7 @@
             
             .hero-image {
                 height: 250px;
+                padding-top: 60px;
             }
             
             .offer-content,
