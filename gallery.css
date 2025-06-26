@@ -1,3 +1,18 @@
+        .rancho-regular {
+            font-family: "Rancho";
+            font-weight: 400;
+            font-style: normal;
+        }
+        .comic-relief-regular {
+            font-family: "Comic Relief";
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        /* Base Styles */
+        * {
+    box-sizing: border-box;
+            }
         :root {
             --primary-color: #EC5988;
             --primary-light: rgba(236, 89, 136, 0.1);
@@ -5,7 +20,7 @@
         }
         
         body {
-            font-family: 'Poppins', sans-serif;
+            font-family: "Comic Relief";
             scroll-behavior: smooth;
             background-color: #f9f9f9;
             color: #333;
@@ -50,7 +65,7 @@
         .logo i {
             margin-right: 0.5rem;
         }
-        .navigation{
+        nav {
             display: flex;
             gap: 15px;
         }
@@ -58,23 +73,24 @@
         nav a {
             color: #666;
             transition: color 0.3s ease;
+            text-decoration: none;
         }
         
         nav a:hover {
             color: var(--primary-color);
         }
-        .navigation h3{
+        nav h3{
             font-family: Rancho;
-            font-size: x-large;
-            display: flex;
-            text-align: right;
+            font-size: 1.5rem;
+            font-weight: 400;
+            
         }
         
         .text h1{
             font-family: Rancho;
         }
         .text p{
-            font-family: Comic Sans MS;
+            font-family: "Comic Relief";
         }
         #story {
             background: linear-gradient(to right, var(--primary-light), white);
@@ -239,11 +255,11 @@
             
         }
         .info h3{
-            font-family: Comic Sans MS;
+            font-family: "Comic Relief";
 
         }
         .info h4{
-            font-family: Comic Sans MS;
+            font-family: "Comic Relief";
         }
         .order-btn {
             background-color: var(--primary-color);
@@ -274,20 +290,79 @@
             margin-left: 0.5rem;
         }
         footer {
-            background-color: var(--primary-color);
+            background-color: #ec4899;
             color: white;
-            padding: 30px 0;
-            text-align: center;
-            font-family:Comic Sans MS;
+            padding: 48px 0;
         }
-        
-        .footer-content {
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 32px;
+            margin-bottom: 32px;
+        }
+
+        @media (min-width: 768px) {
+            .footer{
+                padding: 20px 0;
+            }
+            .footer-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+            
+        }
+
+        .footer-column {
+            text-align: center;
+        }
+
+        .footer-title {
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 16px;
+            font-family: 'Rancho';
+        }
+
+        .social-icons {
             display: flex;
-            flex-direction: column;
+            justify-content: center;
+            gap: 16px;
+        }
+
+        .social-icon {
+            width: 40px;
+            height: 40px;
+            background-color: white;
+            color: #ec4899;
+            border-radius: 50%;
+            display: flex;
             align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
+
+        .social-icon:hover {
+            background-color: #db2777;
+            color: white;
+        }
+
+        .footer-text {
+            font-family: "Comic Relief";
+        }
+
+        .footer-copyright {
+            padding-top: 24px;
+            border-top: 1px solid #f472b6;
+            text-align: center;
+            font-family: "Comic Relief";
+        }
+        .footer-column h2{
+            font-family: Rancho;
+            font-size: 2.5rem;
         }
         
         @media (min-width: 768px) {
+            
             .gallery-grid {
                 grid-template-columns: repeat(3, 1fr);
             }
@@ -316,7 +391,14 @@
                 margin-right: 2.5rem;
             }
         }
-        @media (max-width: 350px) {
+        @media (max-width: 768px) {
+            header{
+                padding: 0px 0px;
+            }
+            nav{
+                font-size: 1.5rem;
+                gap: 15px;
+            }
             
             .content{
                 display: flex;
@@ -326,7 +408,7 @@
             }
             #gallery{
                 padding: 0rem 0;
-                height: 625vh;
+                height: 699vh;
             }
             #story{
                 padding: 0rem 0;
@@ -351,7 +433,7 @@
             width: 100%;
             }
             .h-96{
-                height: 14rem;
+                height: 23rem;
             }
             .order-btn{
                 width: 100;

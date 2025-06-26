@@ -21,7 +21,7 @@
                 case 'scones':
                 case 'biscuits':
                     // Get the selected checkbox
-                    const checkboxes = document.querySelectorAll(`.checkbox-${type}`);
+                    const checkboxes = document.querySelectorAll(`input[type="checkbox"][id^="${type}-"]`);
                     for (let checkbox of checkboxes) {
                         if (checkbox.checked) {
                             selectedItem = checkbox;
@@ -35,14 +35,14 @@
                     }
 
                     // Get quantity
-                    quantity = parseInt(document.getElementById(`${type}-quantity`).value);
+                    quantity = parseInt(document.getElementById(`${type}-quantity`).value) || 1;
                     price = parseFloat(selectedItem.dataset.price) * quantity;
                     description = `${selectedItem.value} x ${quantity}`;
                     break;
 
                 case 'mixedgoodies':
                     // Get the selected checkbox
-                    const mixedCheckboxes = document.querySelectorAll('.checkbox-mixedgoodies');
+                    const mixedCheckboxes = document.querySelectorAll('input[type="checkbox"][id^="mixed-"]');
                     for (let checkbox of mixedCheckboxes) {
                         if (checkbox.checked) {
                             selectedItem = checkbox;
@@ -220,13 +220,13 @@
         function removeFromCart(index) {
             // Subtract the price of the removed item from the total
             cartTotal -= cart[index].price;
-            
+
             // Remove the item from the cart array
             cart.splice(index, 1);
-            
+
             // Decrement the cart count
             cartCount--;
-            
+
             // Update the UI
             updateCartUI();
         }
@@ -295,66 +295,6 @@
 
             // Open in new tab
             window.open(whatsappLink, '_blank');
-        }
-
-        function sendEmail() {
-            if (cart.length === 0) {
-                alert('Your cart is empty. Please add items before sending.');
-                return;
-            }
-
-            const name = document.getElementById('name').value;
-            const phone = document.getElementById('phone').value;
-            const email = document.getElementById('email').value;
-            const date = document.getElementById('delivery-date').value;
-            const description = document.getElementById('description').value;
-
-            if (!name || !phone || !email || !date) {
-                alert('Please fill in all required customer details.');
-                return;
-            }
-
-            // Format cart items for email body
-            let cartItems = '';
-            cart.forEach(item => {
-                cartItems += `<tr><td>${item.description}</td><td>R${item.price.toFixed(2)}</td></tr>`;
-            });
-
-            const subject = `New Order from ${name}`;
-            const body = `
-                <h2>New Order Details</h2>
-                <h3>Customer Information:</h3>
-                <p><strong>Name:</strong> ${name}</p>
-                <p><strong>Phone:</strong> ${phone}</p>
-                <p><strong>Email:</strong> ${email}</p>
-                <p><strong>Delivery/Pickup Date:</strong> ${date}</p>
-
-                <h3>Order Summary:</h3>
-                <table border="1" cellpadding="5" cellspacing="0">
-                    <thead>
-                        <tr>
-                            <th>Item</th>
-                            <th>Price</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        ${cartItems}
-                        <tr>
-                            <td><strong>Total</strong></td>
-                            <td><strong>R${cartTotal.toFixed(2)}</strong></td>
-                        </tr>
-                    </tbody>
-                </table>
-
-                <h3>Special Instructions:</h3>
-                <p>${description || 'None'}</p>
-            `;
-
-            // Create mailto link
-            const mailtoLink = `mailto:?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-
-            // Open email client
-            window.location.href = mailtoLink;
         }
 
         // Initialize the cart UI

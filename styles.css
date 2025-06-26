@@ -106,6 +106,7 @@
         section {
             padding: 80px 0;
         }
+
         
         .section-title {
             font-size: 2.5rem;
@@ -156,6 +157,14 @@
         
         .hero-left {
             margin-bottom: 40px;
+        }
+        .hero-right{
+            height: 28rem;
+        }
+        .hero-right img{
+            margin-top: 10%;
+             width: 90%; 
+             border-radius: 10%;
         }
         
         .hero-image {
@@ -487,13 +496,17 @@
             .logo-text {
                 display: block;
             }
-            
+            section{
+                padding: 30px 0;
+            }
             
             
             #section-one {
-                padding-top: 150px;
+                padding-top: 20px;
             }
-            
+            #section-two{
+                padding: 18px 0;
+            }
             .hero-content {
                 flex-direction: row;
                 align-items: center;
@@ -573,7 +586,7 @@
                 height: 200px;
             }
         }
-        @media (max-width: 350px) {
+        @media (max-width: 768px) {
             nav{
                 font-size: small;
                 gap: 0%;
@@ -585,14 +598,17 @@
                 padding: 35px 0px;
             }
             #section-one{
-                padding-top: 102px;
+                padding-top: 20px;
             }
             .hero-left{
-                margin-bottom: 72px;
+                margin-bottom: 0px;
             }
             .hero-image{
-                height: 190px;
+                height: 20rem;
                 margin-bottom: 0%;
+            }
+            .hero-right{
+                height: 23rem;
             }
             .hero-text h3{
                 font-size: 2rem;

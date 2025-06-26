@@ -4,10 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="gallery.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Rancho&display=swap');
+        
+        @import url('https://fonts.googleapis.com/css2?family=Comic+Relief:wght@400;700&display=swap');
+
+    </style>
     <title>gallery</title>
 </head>
     <body>
-    <header class="py-4">
+    <header>
         <div class="container header-content">
             <div class="logo">
                 <a href="index.html">
@@ -15,13 +21,13 @@
                 </a>
             </div>
             <div class="navigation">
-                <nav class="flex space-x-6">
+                <nav>
+                    <a href="qoutation.html">
+                        <i class="fas fa-orderher"><h3>Order here</h3></i>
+                    </a>
                     <a href="index.html" title="Home">
                         
                         <i class="fas fa-home"><h3>Home</h3></i>
-                    </a>
-                    <a href="qoutation.html">
-                        <i class="fas fa-orderher"><h3>Order here</h3></i>
                     </a>
                 </nav>
             </div>
@@ -141,27 +147,8 @@
                     <img src="icons/logo_2.png">
                 </div>
                 <div class="contact-info">
-                    <h2>Get in <span>Touch</span></h2>
-                    <div class="info">
                     
-                    <div class="hours">
-                        <h3>Hours:</h3><br>
-                        <h4>Tue-Sun
-                            <br>
-                            Open: 08:00
-                            <br>
-                            Close: 17:00
-                        </h4>
-                    </div>
-                    <div class="address">
-                        <h3>Address:</h3><br>
-                        <h4>4143
-                            <br>
-                            Lesolang street
-                            <br>
-                            Orland West</h4>
-                    </div>
-                    </div>
+                    
                     
                     <div class="button mt-8">
                        <a href="qoutation.html"> 
@@ -176,9 +163,38 @@
         </div>
     </section>
     <footer>
-        <div class="container footer-content">
-            <p>&copy; 2023 Sweet Delights Bakery. All rights reserved.</p>
-        
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-column">
+                    <h2>Get in Touch</h2>
+                    <h3 class="footer-title">Social</h3>
+                    <div class="social-icons">
+                        <a href="#" class="social-icon">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="social-icon">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="social-icon">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="footer-column">
+                    <h3 class="footer-title">Address</h3>
+                    <p class="footer-text">4143 Lesolang street<br>Orland West<br>Soweto</p>
+                </div>
+
+                <div class="footer-column">
+                    <h3 class="footer-title">Hours</h3>
+                    <p class="footer-text">Tuesday - Friday: 8am - 5pm<br>Saturday - Sunday: 9am - 2pm<br> Monday: closed</p>
+                </div>
+            </div>
+
+            <div class="footer-copyright">
+                <p>&copy; 2023 Sweet Delights Bakery. All rights reserved.</p>
+            </div>
         </div>
     </footer>
     
